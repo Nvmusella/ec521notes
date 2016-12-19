@@ -31,7 +31,7 @@
 			data.txt - The mobility of polymorphism is in fact quite open-minded in its anthropology.
 				used:  echo 0000000000 | ./2runMe
 		cookbee
-			
+			symblink or change command lab	
 		ballsnazzy
 			data.txt - We will steadfastly and unceasingly resell wireless solutions for today's capital-based market leaders.
 				used: cat data file as lab user. 
@@ -41,7 +41,7 @@
 			Data.txt - You are now taking a final exam.
 		
 		ftper
-
+			metasploit
 
 
 
