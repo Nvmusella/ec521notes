@@ -19,6 +19,8 @@
 		missionmug
 			data.txt - The psychology of morphology is nearly dogmatic in its economics.
 				used: ran script to try different numbers 0-100
+				
+
 		bluefoggy 
 			
 
@@ -247,3 +249,43 @@ lab@crunchbang:~$ ./5runMe
 
 The smart trader nowadays will plan to amortize senior-rated transfers.
 
+----
+
+3runMe;
+
+lab@crunchbang:~$ ./3runMe 
+Number?55
+
+lab@crunchbang:~$ strings 3runMe 
+/lib/ld-linux.so.2
+libstdc++.so.6
+_ITM_deregisterTMCloneTable
+__gmon_start__
+_Jv_RegisterClasses
+_ITM_registerTMCloneTable
+__gxx_personality_v0
+libm.so.6
+libgcc_s.so.1
+_Unwind_Resume
+libc.so.6
+_IO_stdin_used
+printf
+system
+scanf
+__libc_start_main
+GCC_3.0
+CXXABI_1.3
+GLIBC_2.0
+PTRh`
+[^_]
+Number?
+cat /home/missionmug/data.txt
+;*2$"
+zPLR
+
+lab@crunchbang:~$ objdump 3runMe 
+ 8048639:	83 f8 2f             	cmp    $0x2f,%eax
+
+lab@crunchbang:~$ ./3runMe 
+Number?47
+The psychology of morphology is nearly dogmatic in its economics.
