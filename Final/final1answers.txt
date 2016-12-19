@@ -1,0 +1,53 @@
+0a.
+	a. xx - 0x7fffffffe1cc
+	   yy - 0x7fffffffe1c8
+	   cc - 0x7fffffffe1dc
+
+	b. 
+	c. argc - 0x7fffffffe1fc
+0c.	i. ./repeat.out aa
+	ii. ./repeat.out 3, hi
+	iii. ./repeat.out 3, hi; ./repeat.out 1, there
+	iv. ./repeat.out
+	v. ./repeat.out 3, %%%
+
+
+1.
+	Monarch
+		root
+			
+		missionmug
+			data.txt - The psychology of morphology is nearly dogmatic in its economics.
+				used: ran script to try different numbers 0-100
+		bluefoggy 
+			
+
+
+	Noble
+		seetow
+			data.txt - The 1992 Merlot from Pepsi Vineyards mixes magnetic halibut undertones with a oaty onion essence.
+				used: runMe - could put commands as arguments and it would run as seetow. cat data file
+		railsfax
+			data.txt - The mobility of polymorphism is in fact quite open-minded in its anthropology.
+				used:  echo 0000000000 | ./2runMe
+		cookbee
+			
+		ballsnazzy
+			data.txt - We will steadfastly and unceasingly resell wireless solutions for today's capital-based market leaders.
+				used: cat data file as lab user. 
+
+	Plebe
+		Lab
+			Data.txt - You are now taking a final exam.
+		
+		ftper
+
+
+
+
+Twikiname data: Your data is: A73104
+
+data.txt from var/www/data.txt
+		In off-balance-sheet markets, be sure to divest from high-yield long positions.
+
+			

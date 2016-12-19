@@ -1,0 +1,52 @@
+Username	First name	Last name	Password	Cracked Password
+admin	admin	admin	fc5e038d38a57032085441e7fe7010b0	helloworld
+gordonb	Gordon	Brown	e99a18c428cb38d5f260853678922e03	abc123
+1337	Hack	Me	8d3533d75ae2c3966d7e0d4fcc69216b	charley
+pablo	Pablo	Picasso	0d107d09f5bbe40cade3de5c71e9e9b7	letmein
+tester	Tester	User	098f6bcd4621d373cade4e832627b4f6	test
+bob	Bob	Smith	5f4dcc3b5aa765d61d8327deb882cf99	password
+
+----
+
+lab 6 for other usernames and passes
+
+------
+
+hw3:
+
+ng:82120692: qil@secret.net:0:8107051632
+yune:iloveyou: wa@secret.org:0:8106443161
+oiiu:flyheart: liut@secret.org:0:8106860097
+xuhen:15930380: xxs@secret.net:0:8106445209
+Ahuga:apl12345: apel@secret.net:0:8106859832
+uong:unseenon: bdu@secret.net:0:8106518392
+Baerk:flatso: bb@secret.net:0:8106440541
+ELi:leo0715: l@secret.org:0:8108345828
+klin:Chunwah8: wo@secret.net:0:8106860047
+gshu:19900214: kz@secret.net:0:8107251681
+Du:hengdude: he@secret.net:0:8106821553
+yNg:kelly711: jng@secret.net:0:8106784090
+io:123qwe: m@secret.net:0:8106594647
+arda:IDontkno: rich@secret.net:0:8106859786
+rAhdd:password: samah@secret.net:0:8107909018
+Thr:goshdont: khur@secret.net:0:8106860294
+eabb:Wooleys: mcn@secret.net:0:8107402267
+utkami:xionxion: kkawa@secret.net:0:8108014323
+Aam:SuperSku: mrca@secret.net:0:8107327530
+olas:423535: nip@secret.net:0:8106860062
+Vse:dn7fg88t: vp@secret.net:0:8107304025
+
+there is no nmap , netdiscover ,fping , etc. on the machine can try ping script
+for ip in $(seq 1 254); do if ping -c 1 10.241.13.$ip> /dev/null; then echo 10.241.13.$ip UP; fi; done
+
+====================
+
+http://www.mathwarehouse.com/arithmetic/numbers/prime-number/prime-factorization.php?number=1606938044258990275541962106630120168294804807453631398064143&primeFunctions=Find+the+Prime+Factorization
+
+https://samsymons.com/blog/reverse-engineering-with-radare2-part-1/
+
+https://sourceware.org/gdb/onlinedocs/gdb/TUI-Commands.html
+
+https://www.onlinedisassembler.com/odaweb/tgPmWMMG
+
+http://tools.kali.org/exploitation-tools/shellnoob
