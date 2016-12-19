@@ -237,7 +237,7 @@ int main() {
   system("less /var/tmp/blank.txt");
 }
 
-ab@crunchbang:~$ cat less
+lab@crunchbang:~$ cat less
 #!/bin/sh
 cat /home/cookbee/data.txt
 lab@crunchbang:~$ echo $PATH
@@ -249,6 +249,7 @@ lab@crunchbang:~$ ./5runMe
 
 The smart trader nowadays will plan to amortize senior-rated transfers.
 
+symbolic link: http://www.computerhope.com/issues/ch001638.htm
 ----
 
 3runMe;
