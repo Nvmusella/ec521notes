@@ -317,3 +317,16 @@ int main() {
     system("cat /home/railsfax/data.txt");
   }
 }
+
+----------
+
+runMe:
+
+lab@crunchbang:~$ cat runMe.C
+#include <cstdlib>
+int main(int argc, char **argv) {
+  system(argv[1]);
+}
+
+lab@crunchbang:~$ ./runMe "cat /home/seetow/data.txt"
+cat: /home/seetow/data.txt: Permission denied
