@@ -1,3 +1,9 @@
+
+git add .
+git commit -m "upload new files"
+git push
+git status
+
 Username	First name	Last name	Password	Cracked Password
 admin	admin	admin	fc5e038d38a57032085441e7fe7010b0	helloworld
 gordonb	Gordon	Brown	e99a18c428cb38d5f260853678922e03	abc123
