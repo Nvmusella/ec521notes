@@ -1,0 +1,225 @@
+hping  send "ip(daddr=10.241.13.199)+tcp(dport=22, flags=s)"
+
+https://www.sans.org/security-resources/sec560/netcat_cheat_sheet_v1.pdf
+
+https://www.digitalocean.com/community/tutorials/how-to-use-netcat-to-establish-and-test-tcp-and-udp-connections-on-a-vps
+
+http://rationallyparanoid.com/articles/hping.html
+
+https://pentestlab.wordpress.com/2012/03/01/attacking-the-ftp-service/
+
+http://unix.stackexchange.com/questions/138850/how-to-connect-ssh-with-specified-port
+
+rationallyparanoid.com/articles/hping.html
+
+setuid: http://docs.oracle.com/cd/E19683-01/806-4078/6jd6cjs37/index.html
+find directory -user root -perm -4000 -exec ls -ldb {} \; >/tmp/filename
+setuid or setgid (GNU findutils):
+
+find / -perm /6000
+
+setuid or setgid (POSIX):
+
+find / -perm -4000 -o -perm -2000
+
+setuid and setgid:
+
+find / -perm -6000
+
+$ whoami
+user1
+$ su - user2
+Password:
+$ whoami
+user2
+$ exit
+logout
+
+you want to log in as root, there's no need to specify username:
+
+$ whoami
+user1
+$ su -
+Password:
+$ whoami
+root
+$ exit
+logout
+
+Generally, you can use sudo to launch a new shell as the user you want; the -u flag lets you specify the username you want:
+
+$ whoami
+user1
+$ sudo -u user2 zsh
+$ whoami
+user2
+
+There are more circuitous ways if you don't have sudo access, like ssh username@localhost, but sudo is probably simplest, provided that it's installed and you have permission to use it.
+
+find / -user root -perm -4000
+/bin/umount
+/bin/fusermount
+/bin/su
+/bin/ntfs-3g
+/bin/mount
+/usr/lib/openssh/ssh-keysign
+/usr/lib/policykit-1/polkit-agent-helper-1
+/usr/lib/eject/dmcrypt-get-device
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/spice-gtk/spice-client-glib-usb-acl-helper
+/usr/bin/gpasswd
+/usr/bin/pkexec
+/usr/bin/procmail
+/usr/bin/X
+/usr/bin/newgrp
+/usr/bin/chsh
+/usr/bin/chfn
+/usr/bin/passwd
+/usr/sbin/exim4
+/usr/sbin/pppd
+/sbin/mount.nfs
+ls
+
+
+find / -perm /4000 -exec ls -ldb {} \;
+-----------------------
+sudo adduser new_username
+cut -d: -f1 /etc/passwd
+sudo passwd username
+To remove/delete a user, first you can use:
+
+sudo userdel username
+
+Then you may want to delete the home directory for the deleted user account :
+
+sudo rm -r /home/username
+
+(Please use with caution the above command!)
+
+To modify the username of a user:
+
+usermod -l new_username old_username
+
+To change the password for a user:
+
+sudo passwd username
+
+To change the shell for a user:
+
+sudo chsh username
+
+To change the details for a user (for example real name):
+
+sudo chfn username
+
+And, of course, see also: man adduser, man useradd, man userdel... and so on.
+
+getent passwd
+awk -F':' '$2 ~ "\$" {print $1}' /etc/shadow
+
+---------------------------
+groups
+cut -d: -f1 /etc/group
+getent group
+getent group | cut -d: -f1
+getent group | cut -d: -f1 | sort | cat -n
+
+
+    -G, --groups - print all group IDs
+
+    -n, --name - print a name instead of a number, for -ugG
+
+    -p - Make the output human-readable.
+
+
+
+--------------
+
+hardware: dmessage
+lscpu
+uname -a
+cat /proc/version
+cat /proc/meminfo
+cat /proc/cpuinfo
+cat /etc/resolv.conf
+cat /etc/networks
+
+
+password         (noname)
+foobar           (foo)
+msfadmin         (msfadmin)
+weather 	(yetanother)
+YouWillNeverCrakThisPassword (alentino)
+
+--------------------
+
+#!/bin/bash
+
+
+host="10.241.13.199"
+
+for x in 7000-7009
+do
+	for y in 8000-8009
+	do
+		for z in 9000-9009
+		do
+    			nmap -Pn --host_timeout 100 --max-retries 0 -p $x $host
+			sleep 1
+			nmap -Pn --host_timeout 100 --max-retries 0 -p $y $host
+			sleep 1
+			nmap -Pn --host_timeout 100 --max-retries 0 -p $z $host
+    			sleep 1
+			nmap -Pn -v --host_timeout 200 --max-retries 0 $host
+		done
+	done
+done
+7001
+8003
+9009
+
+nmap -Pn --host_timeout 100 --max-retries 0 -p $x $hostnmap 
+nmap -T5 -Pn --max-rtt-timeout=5ms -p100-600 10.241.13.199
+
+--------------
+
+#!/bin/bash
+
+ports="7001 8003 9009"
+host="10.241.13.199"
+
+for x in $ports
+do
+    hping3 -S -V -p $x $host
+    sleep 1
+done
+
+hping3 -a $fakeaddr -S -V -c 3 -p 7001,8003,9009 $addr
+
+hping3 -c 1 -S $addr -p $port; ... ; ...; 
+nmap -n -Pn $addr -p  1-100 --max-rtt-timeout=50ms
+10103
+
+-----------------------
+
+#!/bin/bash
+
+
+host="10.241.13.199"
+
+for x in 7000-7009
+do
+	for y in 8000-8009
+	do
+		for z in 9000-9009
+		do
+			knock 10.241.13.199 $x:tcp $y:tcp $z:tcp
+			sleep 1
+			nmap -Pn -T4 --host_timeout 100 --max-retries 0 $host
+		done
+	done
+done
+
+--------------
+
+

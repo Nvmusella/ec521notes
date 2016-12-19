@@ -1,0 +1,4 @@
+hi:$1$hi$KDw6CcnwuUyyMBRJV.UZZ.:17065:0:99999:7:::
+ec521:$1$ec521$004BORdeo6J2LJL822nW4/:17065:0:99999:7:::
+bart:$1$bart$rCQLdn38.86VwxtKc6I2P1:17065:0:99999:7:::
+qbert:$1$qbert$QsDcAFcW/MqcRhodMA1R40:17065:0:99999:7:::

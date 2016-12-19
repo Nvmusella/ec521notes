@@ -1,0 +1,30 @@
+./vulnA
+How should I go?  1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaec521
+ec521
+
+# 32 chars in total; 1 and the 31 a's to print once
+# Or 16 single numbers and then ec521 to repeat multiple times
+
+#mac - 1234567ec521 - multiple prints
+
+
+------------
+
+r2 slots3
+Vpd 
+b
+
+---------------
+
+layout asm
+
+-----------------
+
+date +%s -s @134460458; ./slots3
+
+set disassembly-flavor intel
+show disassembly-flavor
+
+
+
+

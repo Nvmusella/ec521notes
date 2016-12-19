@@ -1,0 +1,1284 @@
+sudo nmap -sP 10.241.13.0/24
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2016-10-08 13:30 EDT
+Nmap scan report for 10.241.13.1
+Host is up (0.016s latency).
+Nmap scan report for ece-ec521-016.bu.edu (10.241.13.16)
+Host is up (0.017s latency).
+Nmap scan report for ece-ec521-018.bu.edu (10.241.13.18)
+Host is up (0.013s latency).
+Nmap scan report for signals10net-01.bu.edu (10.241.13.21)
+Host is up (0.014s latency).
+Nmap scan report for signals10net-49.bu.edu (10.241.13.69)
+Host is up (0.011s latency).
+Nmap scan report for signals10net-50.bu.edu (10.241.13.70)
+Host is up (0.011s latency).
+Nmap scan report for signals10net-51.bu.edu (10.241.13.71)
+Host is up (0.011s latency).
+Nmap scan report for 10.241.13.166
+Host is up (0.019s latency).
+Nmap scan report for 10.241.13.167
+Host is up (0.019s latency).
+Nmap scan report for 10.241.13.199
+Host is up (0.0019s latency).
+Nmap scan report for 10.241.13.201
+Host is up (0.021s latency).
+Nmap done: 256 IP addresses (11 hosts up) scanned in 4.53 seconds
+
+-------------------------------------
+
+sudo nmap -sA 10.241.13.0/24
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2016-10-08 13:31 EDT
+Nmap scan report for 10.241.13.1
+Host is up (0.0024s latency).
+All 1000 scanned ports on 10.241.13.1 are unfiltered
+
+Nmap scan report for ece-ec521-016.bu.edu (10.241.13.16)
+Host is up (0.0011s latency).
+All 1000 scanned ports on ece-ec521-016.bu.edu (10.241.13.16) are unfiltered
+
+Nmap scan report for ece-ec521-018.bu.edu (10.241.13.18)
+Host is up (0.0011s latency).
+All 1000 scanned ports on ece-ec521-018.bu.edu (10.241.13.18) are filtered
+
+Nmap scan report for signals10net-01.bu.edu (10.241.13.21)
+Host is up (0.0012s latency).
+All 1000 scanned ports on signals10net-01.bu.edu (10.241.13.21) are unfiltered
+
+Nmap scan report for signals10net-49.bu.edu (10.241.13.69)
+Host is up (0.0010s latency).
+All 1000 scanned ports on signals10net-49.bu.edu (10.241.13.69) are unfiltered (847) or filtered (153)
+
+Nmap scan report for signals10net-50.bu.edu (10.241.13.70)
+Host is up (0.00097s latency).
+All 1000 scanned ports on signals10net-50.bu.edu (10.241.13.70) are unfiltered (847) or filtered (153)
+
+Nmap scan report for signals10net-51.bu.edu (10.241.13.71)
+Host is up (0.00094s latency).
+All 1000 scanned ports on signals10net-51.bu.edu (10.241.13.71) are unfiltered (847) or filtered (153)
+
+Nmap scan report for 10.241.13.166
+Host is up (0.00094s latency).
+All 1000 scanned ports on 10.241.13.166 are unfiltered
+
+Nmap scan report for 10.241.13.167
+Host is up (0.0014s latency).
+All 1000 scanned ports on 10.241.13.167 are unfiltered
+
+Nmap scan report for 10.241.13.199
+Host is up (0.00087s latency).
+All 1000 scanned ports on 10.241.13.199 are unfiltered
+
+Nmap scan report for 10.241.13.201
+Host is up (0.00092s latency).
+All 1000 scanned ports on 10.241.13.201 are unfiltered
+
+Nmap done: 256 IP addresses (11 hosts up) scanned in 236.79 seconds
+
+----------------
+
+nmap -v -sV 10.241.13.0/24
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2016-10-08 13:49 EDT
+NSE: Loaded 35 scripts for scanning.
+Initiating Ping Scan at 13:49
+Scanning 256 hosts [4 ports/host]
+Completed Ping Scan at 13:49, 4.67s elapsed (256 total hosts)
+Initiating Parallel DNS resolution of 256 hosts. at 13:49
+Completed Parallel DNS resolution of 256 hosts. at 13:49, 0.00s elapsed
+Nmap scan report for 10.241.13.0 [host down]
+Nmap scan report for 10.241.13.2 [host down]
+......
+Initiating SYN Stealth Scan at 13:49
+Scanning 11 hosts [1000 ports/host]
+Discovered open port 111/tcp on 10.241.13.166
+Discovered open port 111/tcp on 10.241.13.199
+Discovered open port 111/tcp on 10.241.13.201
+Discovered open port 22/tcp on 10.241.13.69
+Discovered open port 22/tcp on 10.241.13.70
+Discovered open port 22/tcp on 10.241.13.71
+Discovered open port 22/tcp on 10.241.13.16
+Discovered open port 22/tcp on 10.241.13.199
+Discovered open port 22/tcp on 10.241.13.166
+Discovered open port 22/tcp on 10.241.13.201
+Discovered open port 25/tcp on 10.241.13.21
+Discovered open port 3389/tcp on 10.241.13.167
+Discovered open port 80/tcp on 10.241.13.21
+Discovered open port 80/tcp on 10.241.13.167
+Discovered open port 80/tcp on 10.241.13.166
+Discovered open port 80/tcp on 10.241.13.199
+Discovered open port 135/tcp on 10.241.13.167
+Discovered open port 80/tcp on 10.241.13.201
+Increasing send delay for 10.241.13.21 from 0 to 5 due to 11 out of 35 dropped probes since last increase.
+Increasing send delay for 10.241.13.166 from 0 to 5 due to 11 out of 33 dropped probes since last increase.
+Increasing send delay for 10.241.13.199 from 0 to 5 due to 11 out of 31 dropped probes since last increase.
+Increasing send delay for 10.241.13.16 from 0 to 5 due to 12 out of 39 dropped probes since last increase.
+Increasing send delay for 10.241.13.167 from 0 to 5 due to 11 out of 34 dropped probes since last increase.
+Increasing send delay for 10.241.13.201 from 0 to 5 due to 11 out of 31 dropped probes since last increase.
+Discovered open port 139/tcp on 10.241.13.21
+Discovered open port 21/tcp on 10.241.13.21
+Discovered open port 139/tcp on 10.241.13.167
+Discovered open port 445/tcp on 10.241.13.167
+Discovered open port 445/tcp on 10.241.13.21
+Increasing send delay for 10.241.13.1 from 0 to 5 due to 20 out of 65 dropped probes since last increase.
+Increasing send delay for 10.241.13.166 from 5 to 10 due to 11 out of 27 dropped probes since last increase.
+Increasing send delay for 10.241.13.167 from 5 to 10 due to 11 out of 29 dropped probes since last increase.
+Increasing send delay for 10.241.13.199 from 5 to 10 due to 11 out of 26 dropped probes since last increase.
+Increasing send delay for 10.241.13.166 from 10 to 20 due to 11 out of 23 dropped probes since last increase.
+Increasing send delay for 10.241.13.16 from 5 to 10 due to 11 out of 25 dropped probes since last increase.
+Increasing send delay for 10.241.13.21 from 5 to 10 due to 11 out of 25 dropped probes since last increase.
+Increasing send delay for 10.241.13.201 from 5 to 10 due to 11 out of 30 dropped probes since last increase.
+Increasing send delay for 10.241.13.1 from 5 to 10 due to 11 out of 27 dropped probes since last increase.
+Increasing send delay for 10.241.13.16 from 10 to 20 due to 11 out of 22 dropped probes since last increase.
+Increasing send delay for 10.241.13.71 from 0 to 5 due to 11 out of 36 dropped probes since last increase.
+Increasing send delay for 10.241.13.167 from 10 to 20 due to 11 out of 24 dropped probes since last increase.
+Increasing send delay for 10.241.13.199 from 10 to 20 due to 11 out of 24 dropped probes since last increase.
+Increasing send delay for 10.241.13.21 from 10 to 20 due to 11 out of 22 dropped probes since last increase.
+Increasing send delay for 10.241.13.1 from 10 to 20 due to 11 out of 22 dropped probes since last increase.
+Increasing send delay for 10.241.13.201 from 10 to 20 due to 11 out of 25 dropped probes since last increase.
+Increasing send delay for 10.241.13.166 from 20 to 40 due to 11 out of 27 dropped probes since last increase.
+Increasing send delay for 10.241.13.16 from 20 to 40 due to 11 out of 22 dropped probes since last increase.
+Increasing send delay for 10.241.13.167 from 20 to 40 due to 11 out of 22 dropped probes since last increase.
+Increasing send delay for 10.241.13.1 from 20 to 40 due to 11 out of 22 dropped probes since last increase.
+Increasing send delay for 10.241.13.21 from 20 to 40 due to 11 out of 24 dropped probes since last increase.
+Increasing send delay for 10.241.13.199 from 20 to 40 due to 11 out of 26 dropped probes since last increase.
+Increasing send delay for 10.241.13.201 from 20 to 40 due to 11 out of 23 dropped probes since last increase.
+Increasing send delay for 10.241.13.70 from 0 to 5 due to 16 out of 52 dropped probes since last increase.
+Increasing send delay for 10.241.13.16 from 40 to 80 due to 11 out of 22 dropped probes since last increase.
+Increasing send delay for 10.241.13.69 from 0 to 5 due to 19 out of 62 dropped probes since last increase.
+Increasing send delay for 10.241.13.71 from 5 to 10 due to 11 out of 27 dropped probes since last increase.
+Increasing send delay for 10.241.13.166 from 40 to 80 due to 11 out of 24 dropped probes since last increase.
+Increasing send delay for 10.241.13.167 from 40 to 80 due to 11 out of 23 dropped probes since last increase.
+Increasing send delay for 10.241.13.199 from 40 to 80 due to 11 out of 23 dropped probes since last increase.
+Increasing send delay for 10.241.13.1 from 40 to 80 due to 11 out of 22 dropped probes since last increase.
+Increasing send delay for 10.241.13.16 from 80 to 160 due to 11 out of 22 dropped probes since last increase.
+Increasing send delay for 10.241.13.201 from 40 to 80 due to 11 out of 30 dropped probes since last increase.
+Increasing send delay for 10.241.13.1 from 80 to 160 due to 11 out of 22 dropped probes since last increase.
+Increasing send delay for 10.241.13.166 from 80 to 160 due to 11 out of 24 dropped probes since last increase.
+Increasing send delay for 10.241.13.21 from 40 to 80 due to 11 out of 23 dropped probes since last increase.
+Increasing send delay for 10.241.13.167 from 80 to 160 due to 11 out of 25 dropped probes since last increase.
+Increasing send delay for 10.241.13.199 from 80 to 160 due to 11 out of 23 dropped probes since last increase.
+Increasing send delay for 10.241.13.69 from 5 to 10 due to 11 out of 25 dropped probes since last increase.
+Increasing send delay for 10.241.13.71 from 10 to 20 due to 11 out of 30 dropped probes since last increase.
+Increasing send delay for 10.241.13.70 from 5 to 10 due to 11 out of 28 dropped probes since last increase.
+Increasing send delay for 10.241.13.21 from 80 to 160 due to 11 out of 23 dropped probes since last increase.
+Discovered open port 13/tcp on 10.241.13.167
+SYN Stealth Scan Timing: About 11.41% done; ETC: 13:54 (0:04:01 remaining)
+Increasing send delay for 10.241.13.69 from 10 to 20 due to 11 out of 23 dropped probes since last increase.
+Increasing send delay for 10.241.13.70 from 10 to 20 due to 11 out of 25 dropped probes since last increase.
+Increasing send delay for 10.241.13.71 from 20 to 40 due to 11 out of 23 dropped probes since last increase.
+Increasing send delay for 10.241.13.201 from 80 to 160 due to 11 out of 30 dropped probes since last increase.
+Increasing send delay for 10.241.13.69 from 20 to 40 due to 11 out of 23 dropped probes since last increase.
+Increasing send delay for 10.241.13.70 from 20 to 40 due to 11 out of 22 dropped probes since last increase.
+Increasing send delay for 10.241.13.71 from 40 to 80 due to 11 out of 27 dropped probes since last increase.
+Increasing send delay for 10.241.13.70 from 40 to 80 due to 11 out of 31 dropped probes since last increase.
+Increasing send delay for 10.241.13.69 from 40 to 80 due to 11 out of 30 dropped probes since last increase.
+Increasing send delay for 10.241.13.71 from 80 to 160 due to 11 out of 29 dropped probes since last increase.
+Increasing send delay for 10.241.13.70 from 80 to 160 due to 11 out of 28 dropped probes since last increase.
+Discovered open port 6667/tcp on 10.241.13.21
+Increasing send delay for 10.241.13.69 from 80 to 160 due to 13 out of 43 dropped probes since last increase.
+Discovered open port 19/tcp on 10.241.13.167
+Discovered open port 7/tcp on 10.241.13.167
+Completed SYN Stealth Scan against 10.241.13.18 in 58.06s (10 hosts left)
+SYN Stealth Scan Timing: About 31.01% done; ETC: 13:52 (0:02:16 remaining)
+Discovered open port 9/tcp on 10.241.13.167
+SYN Stealth Scan Timing: About 45.07% done; ETC: 13:52 (0:01:51 remaining)
+Discovered open port 17/tcp on 10.241.13.167
+Discovered open port 8649/tcp on 10.241.13.70
+Discovered open port 8649/tcp on 10.241.13.71
+Discovered open port 8649/tcp on 10.241.13.69
+SYN Stealth Scan Timing: About 58.77% done; ETC: 13:52 (0:01:25 remaining)
+Discovered open port 49155/tcp on 10.241.13.167
+Discovered open port 3128/tcp on 10.241.13.21
+Discovered open port 49154/tcp on 10.241.13.167
+Discovered open port 49156/tcp on 10.241.13.167
+SYN Stealth Scan Timing: About 71.27% done; ETC: 13:53 (0:01:01 remaining)
+Discovered open port 49161/tcp on 10.241.13.167
+Discovered open port 49152/tcp on 10.241.13.167
+Discovered open port 49153/tcp on 10.241.13.167
+SYN Stealth Scan Timing: About 83.86% done; ETC: 13:53 (0:00:35 remaining)
+Discovered open port 5357/tcp on 10.241.13.167
+Completed SYN Stealth Scan against 10.241.13.167 in 224.65s (9 hosts left)
+Completed SYN Stealth Scan against 10.241.13.166 in 225.45s (8 hosts left)
+Completed SYN Stealth Scan against 10.241.13.199 in 227.05s (7 hosts left)
+Completed SYN Stealth Scan against 10.241.13.201 in 229.25s (6 hosts left)
+Completed SYN Stealth Scan against 10.241.13.21 in 229.85s (5 hosts left)
+Completed SYN Stealth Scan against 10.241.13.1 in 230.65s (4 hosts left)
+Completed SYN Stealth Scan against 10.241.13.16 in 230.65s (3 hosts left)
+Completed SYN Stealth Scan against 10.241.13.71 in 234.26s (2 hosts left)
+Completed SYN Stealth Scan against 10.241.13.70 in 235.46s (1 host left)
+Completed SYN Stealth Scan at 13:53, 238.66s elapsed (11000 total ports)
+Initiating Service scan at 13:53
+Scanning 40 services on 11 hosts
+Completed Service scan at 13:55, 136.16s elapsed (40 services on 11 hosts)
+NSE: Script scanning 11 hosts.
+Initiating NSE at 13:55
+Completed NSE at 13:55, 4.22s elapsed
+Nmap scan report for 10.241.13.1
+Host is up (0.0015s latency).
+All 1000 scanned ports on 10.241.13.1 are closed
+
+Nmap scan report for ece-ec521-016.bu.edu (10.241.13.16)
+Host is up (0.0011s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     lshd secure shell 2.1 (protocol 2.0)
+
+Nmap scan report for ece-ec521-018.bu.edu (10.241.13.18)
+Host is up (0.0010s latency).
+All 1000 scanned ports on ece-ec521-018.bu.edu (10.241.13.18) are filtered
+
+Nmap scan report for signals10net-01.bu.edu (10.241.13.21)
+Host is up (0.0011s latency).
+Not shown: 993 closed ports
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd 3.0.2
+25/tcp   open  smtp        Postfix smtpd
+80/tcp   open  http        Apache httpd 2.4.7 ((Ubuntu))
+139/tcp  open  netbios-ssn Samba smbd 3.X (workgroup: MARY008-0302-DHCP-110)
+445/tcp  open  netbios-ssn Samba smbd 3.X (workgroup: MARY008-0302-DHCP-110)
+3128/tcp open  http-proxy  Squid http proxy 3.3.8
+6667/tcp open  irc         IRCnet ircd
+Service Info: Hosts:  mary008-0302-dhcp-110.bu.edu, irc.localhost; OS: Unix
+
+Nmap scan report for signals10net-49.bu.edu (10.241.13.69)
+Host is up (0.00095s latency).
+Not shown: 845 closed ports, 153 filtered ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 5.3 (protocol 1.99)
+8649/tcp open  ganglia Ganglia XML Grid monitor 3.7.2 (Cluster name: ece-signals; Owner: unspecified; Source: gmond)
+
+Nmap scan report for signals10net-50.bu.edu (10.241.13.70)
+Host is up (0.0010s latency).
+Not shown: 845 closed ports, 153 filtered ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 5.3 (protocol 1.99)
+8649/tcp open  ganglia Ganglia XML Grid monitor
+
+Nmap scan report for signals10net-51.bu.edu (10.241.13.71)
+Host is up (0.00099s latency).
+Not shown: 845 closed ports, 153 filtered ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 5.3 (protocol 1.99)
+8649/tcp open  ganglia Ganglia XML Grid monitor 3.7.2 (Cluster name: ece-signals; Owner: unspecified; Source: gmond)
+
+Nmap scan report for 10.241.13.166
+Host is up (0.00097s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE VERSION
+22/tcp  open  ssh     OpenSSH 6.7p1 Debian 5+deb8u3 (protocol 2.0)
+80/tcp  open  http    Apache httpd 2.4.10 ((Debian))
+111/tcp open  rpcbind 2-4 (RPC #100000)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.241.13.167
+Host is up (0.00096s latency).
+Not shown: 983 closed ports
+PORT      STATE SERVICE            VERSION
+7/tcp     open  echo
+9/tcp     open  discard?
+13/tcp    open  daytime            Microsoft Windows USA daytime
+17/tcp    open  qotd               Windows qotd (English)
+19/tcp    open  chargen
+80/tcp    open  http               Microsoft IIS httpd 7.5
+135/tcp   open  msrpc              Microsoft Windows RPC
+139/tcp   open  netbios-ssn        Microsoft Windows 98 netbios-ssn
+445/tcp   open  microsoft-ds       Microsoft Windows 10 microsoft-ds
+3389/tcp  open  ssl/ms-wbt-server?
+5357/tcp  open  http               Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+49152/tcp open  msrpc              Microsoft Windows RPC
+49153/tcp open  msrpc              Microsoft Windows RPC
+49154/tcp open  msrpc              Microsoft Windows RPC
+49155/tcp open  msrpc              Microsoft Windows RPC
+49156/tcp open  msrpc              Microsoft Windows RPC
+49161/tcp open  msrpc              Microsoft Windows RPC
+Service Info: OSs: Windows, Windows 98, Windows 10; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_98, cpe:/o:microsoft:windows_10
+
+Nmap scan report for 10.241.13.199
+Host is up (0.00089s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE VERSION
+22/tcp  open  ssh     OpenSSH 6.7p1 Debian 5+deb8u3 (protocol 2.0)
+80/tcp  open  http    Apache httpd 2.4.10 ((Debian))
+111/tcp open  rpcbind 2-4 (RPC #100000)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.241.13.201
+Host is up (0.00098s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE VERSION
+22/tcp  open  ssh     OpenSSH 6.7p1 Debian 5+deb8u3 (protocol 2.0)
+80/tcp  open  http    Apache httpd 2.4.10 ((Debian))
+111/tcp open  rpcbind 2-4 (RPC #100000)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (11 hosts up) scanned in 385.35 seconds
+           Raw packets sent: 16548 (716.120KB) | Rcvd: 12470 (518.904KB)
+
+----- Nmap intense scan 2 w/ UDP
+
+arting Nmap 7.01 ( https://nmap.org ) at 2016-10-12 18:57 EDT
+NSE: Loaded 132 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 18:57
+Completed NSE at 18:57, 0.00s elapsed
+Initiating NSE at 18:57
+Completed NSE at 18:57, 0.00s elapsed
+Initiating Ping Scan at 18:57
+Scanning 256 hosts [4 ports/host]
+Completed Ping Scan at 18:57, 4.63s elapsed (256 total hosts)
+Initiating Parallel DNS resolution of 256 hosts. at 18:57
+Completed Parallel DNS resolution of 256 hosts. at 18:57, 0.00s elapsed
+Nmap scan report for 10.241.13.0 [host down]
+Nmap scan report for 10.241.13.2 [host down]
+Nmap scan report for 10.241.13.3 [host down]
+Nmap scan report for 10.241.13.4 [host down]
+Nmap scan report for 10.241.13.5 [host down]
+Nmap scan report for 10.241.13.6 [host down]
+Nmap scan report for 10.241.13.7 [host down]
+Nmap scan report for 10.241.13.8 [host down]
+Nmap scan report for 10.241.13.9 [host down]
+Nmap scan report for 10.241.13.10 [host down]
+Nmap scan report for 10.241.13. [host down]
+Nmap scan report for 10.241.13.12 [host down]
+Nmap scan report for 10.241.13.13 [host down]
+Nmap scan report for 10.241.13.14 [host down]
+Nmap scan report for 10.241.13.15 [host down]
+Nmap scan report for 10.241.13.17 [host down]
+Nmap scan report for 10.241.13.19 [host down]
+Nmap scan report for 10.241.13.20 [host down]
+Nmap scan report for 10.241.13.22 [host down]
+Nmap scan report for 10.241.13.23 [host down]
+Nmap scan report for 10.241.13.24 [host down]
+Nmap scan report for 10.241.13.25 [host down]
+Nmap scan report for 10.241.13.26 [host down]
+Nmap scan report for 10.241.13.27 [host down]
+Nmap scan report for 10.241.13.28 [host down]
+Nmap scan report for 10.241.13.29 [host down]
+Nmap scan report for 10.241.13.30 [host down]
+Nmap scan report for 10.241.13.31 [host down]
+Nmap scan report for 10.241.13.32 [host down]
+Nmap scan report for 10.241.13.33 [host down]
+Nmap scan report for 10.241.13.34 [host down]
+Nmap scan report for 10.241.13.35 [host down]
+Nmap scan report for 10.241.13.36 [host down]
+Nmap scan report for 10.241.13.37 [host down]
+Nmap scan report for 10.241.13.38 [host down]
+Nmap scan report for 10.241.13.39 [host down]
+Nmap scan report for 10.241.13.40 [host down]
+Nmap scan report for 10.241.13.41 [host down]
+Nmap scan report for 10.241.13.42 [host down]
+Nmap scan report for 10.241.13.43 [host down]
+Nmap scan report for 10.241.13.44 [host down]
+Nmap scan report for 10.241.13.45 [host down]
+Nmap scan report for 10.241.13.46 [host down]
+Nmap scan report for 10.241.13.47 [host down]
+Nmap scan report for 10.241.13.48 [host down]
+Nmap scan report for 10.241.13.49 [host down]
+Nmap scan report for 10.241.13.50 [host down]
+Nmap scan report for 10.241.13.51 [host down]
+Nmap scan report for 10.241.13.52 [host down]
+Nmap scan report for 10.241.13.53 [host down]
+Nmap scan report for 10.241.13.54 [host down]
+Nmap scan report for 10.241.13.55 [host down]
+Nmap scan report for 10.241.13.56 [host down]
+Nmap scan report for 10.241.13.57 [host down]
+Nmap scan report for 10.241.13.58 [host down]
+Nmap scan report for 10.241.13.59 [host down]
+Nmap scan report for 10.241.13.60 [host down]
+Nmap scan report for 10.241.13.61 [host down]
+Nmap scan report for 10.241.13.62 [host down]
+Nmap scan report for 10.241.13.63 [host down]
+Nmap scan report for 10.241.13.64 [host down]
+Nmap scan report for 10.241.13.65 [host down]
+Nmap scan report for 10.241.13.66 [host down]
+Nmap scan report for 10.241.13.67 [host down]
+Nmap scan report for 10.241.13.68 [host down]
+Nmap scan report for 10.241.13.69 [host down]
+Nmap scan report for 10.241.13.70 [host down]
+Nmap scan report for 10.241.13.72 [host down]
+Nmap scan report for 10.241.13.73 [host down]
+Nmap scan report for 10.241.13.74 [host down]
+Nmap scan report for 10.241.13.75 [host down]
+Nmap scan report for 10.241.13.76 [host down]
+Nmap scan report for 10.241.13.77 [host down]
+Nmap scan report for 10.241.13.79 [host down]
+Nmap scan report for 10.241.13.80 [host down]
+Nmap scan report for 10.241.13.81 [host down]
+Nmap scan report for 10.241.13.82 [host down]
+Nmap scan report for 10.241.13.83 [host down]
+Nmap scan report for 10.241.13.84 [host down]
+Nmap scan report for 10.241.13.85 [host down]
+Nmap scan report for 10.241.13.86 [host down]
+Nmap scan report for 10.241.13.87 [host down]
+Nmap scan report for 10.241.13.88 [host down]
+Nmap scan report for 10.241.13.89 [host down]
+Nmap scan report for 10.241.13.90 [host down]
+Nmap scan report for 10.241.13.91 [host down]
+Nmap scan report for 10.241.13.92 [host down]
+Nmap scan report for 10.241.13.93 [host down]
+Nmap scan report for 10.241.13.94 [host down]
+Nmap scan report for 10.241.13.95 [host down]
+Nmap scan report for 10.241.13.96 [host down]
+Nmap scan report for 10.241.13.97 [host down]
+Nmap scan report for 10.241.13.98 [host down]
+Nmap scan report for 10.241.13.99 [host down]
+Nmap scan report for 10.241.13.100 [host down]
+Nmap scan report for 10.241.13.101 [host down]
+Nmap scan report for 10.241.13.102 [host down]
+Nmap scan report for 10.241.13.103 [host down]
+Nmap scan report for 10.241.13.104 [host down]
+Nmap scan report for 10.241.13.105 [host down]
+Nmap scan report for 10.241.13.106 [host down]
+Nmap scan report for 10.241.13.107 [host down]
+Nmap scan report for 10.241.13.108 [host down]
+Nmap scan report for 10.241.13.109 [host down]
+Nmap scan report for 10.241.13.110 [host down]
+Nmap scan report for 10.241.13.111 [host down]
+Nmap scan report for 10.241.13.112 [host down]
+Nmap scan report for 10.241.13.113 [host down]
+Nmap scan report for 10.241.13.114 [host down]
+Nmap scan report for 10.241.13.115 [host down]
+Nmap scan report for 10.241.13.116 [host down]
+Nmap scan report for 10.241.13.117 [host down]
+Nmap scan report for 10.241.13.118 [host down]
+Nmap scan report for 10.241.13.119 [host down]
+Nmap scan report for 10.241.13.120 [host down]
+Nmap scan report for 10.241.13.121 [host down]
+Nmap scan report for 10.241.13.122 [host down]
+Nmap scan report for 10.241.13.123 [host down]
+Nmap scan report for 10.241.13.124 [host down]
+Nmap scan report for 10.241.13.125 [host down]
+Nmap scan report for 10.241.13.126 [host down]
+Nmap scan report for 10.241.13.127 [host down]
+Nmap scan report for 10.241.13.128 [host down]
+Nmap scan report for 10.241.13.129 [host down]
+Nmap scan report for 10.241.13.130 [host down]
+Nmap scan report for 10.241.13.131 [host down]
+Nmap scan report for 10.241.13.132 [host down]
+Nmap scan report for 10.241.13.133 [host down]
+Nmap scan report for 10.241.13.134 [host down]
+Nmap scan report for 10.241.13.135 [host down]
+Nmap scan report for 10.241.13.136 [host down]
+Nmap scan report for 10.241.13.137 [host down]
+Nmap scan report for 10.241.13.138 [host down]
+Nmap scan report for 10.241.13.139 [host down]
+Nmap scan report for 10.241.13.140 [host down]
+Nmap scan report for 10.241.13.141 [host down]
+Nmap scan report for 10.241.13.142 [host down]
+Nmap scan report for 10.241.13.143 [host down]
+Nmap scan report for 10.241.13.144 [host down]
+Nmap scan report for 10.241.13.145 [host down]
+Nmap scan report for 10.241.13.146 [host down]
+Nmap scan report for 10.241.13.147 [host down]
+Nmap scan report for 10.241.13.148 [host down]
+Nmap scan report for 10.241.13.149 [host down]
+Nmap scan report for 10.241.13.150 [host down]
+Nmap scan report for 10.241.13.151 [host down]
+Nmap scan report for 10.241.13.152 [host down]
+Nmap scan report for 10.241.13.153 [host down]
+Nmap scan report for 10.241.13.154 [host down]
+Nmap scan report for 10.241.13.155 [host down]
+Nmap scan report for 10.241.13.156 [host down]
+Nmap scan report for 10.241.13.157 [host down]
+Nmap scan report for 10.241.13.158 [host down]
+Nmap scan report for 10.241.13.159 [host down]
+Nmap scan report for 10.241.13.160 [host down]
+Nmap scan report for 10.241.13.161 [host down]
+Nmap scan report for 10.241.13.162 [host down]
+Nmap scan report for 10.241.13.163 [host down]
+Nmap scan report for 10.241.13.164 [host down]
+Nmap scan report for 10.241.13.165 [host down]
+Nmap scan report for 10.241.13.168 [host down]
+Nmap scan report for 10.241.13.169 [host down]
+Nmap scan report for 10.241.13.170 [host down]
+Nmap scan report for 10.241.13.171 [host down]
+Nmap scan report for 10.241.13.172 [host down]
+Nmap scan report for 10.241.13.173 [host down]
+Nmap scan report for 10.241.13.174 [host down]
+Nmap scan report for 10.241.13.175 [host down]
+Nmap scan report for 10.241.13.176 [host down]
+Nmap scan report for 10.241.13.177 [host down]
+Nmap scan report for 10.241.13.178 [host down]
+Nmap scan report for 10.241.13.179 [host down]
+Nmap scan report for 10.241.13.180 [host down]
+Nmap scan report for 10.241.13.181 [host down]
+Nmap scan report for 10.241.13.182 [host down]
+Nmap scan report for 10.241.13.183 [host down]
+Nmap scan report for 10.241.13.184 [host down]
+Nmap scan report for 10.241.13.185 [host down]
+Nmap scan report for 10.241.13.186 [host down]
+Nmap scan report for 10.241.13.187 [host down]
+Nmap scan report for 10.241.13.188 [host down]
+Nmap scan report for 10.241.13.189 [host down]
+Nmap scan report for 10.241.13.190 [host down]
+Nmap scan report for 10.241.13.191 [host down]
+Nmap scan report for 10.241.13.192 [host down]
+Nmap scan report for 10.241.13.193 [host down]
+Nmap scan report for 10.241.13.194 [host down]
+Nmap scan report for 10.241.13.195 [host down]
+Nmap scan report for 10.241.13.196 [host down]
+Nmap scan report for 10.241.13.197 [host down]
+Nmap scan report for 10.241.13.198 [host down]
+Nmap scan report for 10.241.13.199 [host down]
+Nmap scan report for 10.241.13.200 [host down]
+Nmap scan report for 10.241.13.202 [host down]
+Nmap scan report for 10.241.13.203 [host down]
+Nmap scan report for 10.241.13.204 [host down]
+Nmap scan report for 10.241.13.205 [host down]
+Nmap scan report for 10.241.13.206 [host down]
+Nmap scan report for 10.241.13.207 [host down]
+Nmap scan report for 10.241.13.208 [host down]
+Nmap scan report for 10.241.13.209 [host down]
+Nmap scan report for 10.241.13.210 [host down]
+Nmap scan report for 10.241.13.211 [host down]
+Nmap scan report for 10.241.13.212 [host down]
+Nmap scan report for 10.241.13.213 [host down]
+Nmap scan report for 10.241.13.214 [host down]
+Nmap scan report for 10.241.13.215 [host down]
+Nmap scan report for 10.241.13.216 [host down]
+Nmap scan report for 10.241.13.217 [host down]
+Nmap scan report for 10.241.13.218 [host down]
+Nmap scan report for 10.241.13.219 [host down]
+Nmap scan report for 10.241.13.220 [host down]
+Nmap scan report for 10.241.13.221 [host down]
+Nmap scan report for 10.241.13.222 [host down]
+Nmap scan report for 10.241.13.223 [host down]
+Nmap scan report for 10.241.13.224 [host down]
+Nmap scan report for 10.241.13.225 [host down]
+Nmap scan report for 10.241.13.226 [host down]
+Nmap scan report for 10.241.13.227 [host down]
+Nmap scan report for 10.241.13.228 [host down]
+Nmap scan report for 10.241.13.229 [host down]
+Nmap scan report for 10.241.13.230 [host down]
+Nmap scan report for 10.241.13.231 [host down]
+Nmap scan report for 10.241.13.232 [host down]
+Nmap scan report for 10.241.13.233 [host down]
+Nmap scan report for 10.241.13.234 [host down]
+Nmap scan report for 10.241.13.235 [host down]
+Nmap scan report for 10.241.13.236 [host down]
+Nmap scan report for 10.241.13.237 [host down]
+Nmap scan report for 10.241.13.238 [host down]
+Nmap scan report for 10.241.13.239 [host down]
+Nmap scan report for 10.241.13.240 [host down]
+Nmap scan report for 10.241.13.241 [host down]
+Nmap scan report for 10.241.13.242 [host down]
+Nmap scan report for 10.241.13.243 [host down]
+Nmap scan report for 10.241.13.244 [host down]
+Nmap scan report for 10.241.13.245 [host down]
+Nmap scan report for 10.241.13.246 [host down]
+Nmap scan report for 10.241.13.247 [host down]
+Nmap scan report for 10.241.13.248 [host down]
+Nmap scan report for 10.241.13.249 [host down]
+Nmap scan report for 10.241.13.250 [host down]
+Nmap scan report for 10.241.13.251 [host down]
+Nmap scan report for 10.241.13.252 [host down]
+Nmap scan report for 10.241.13.253 [host down]
+Nmap scan report for 10.241.13.254 [host down]
+Nmap scan report for 10.241.13.255 [host down]
+Initiating SYN Stealth Scan at 18:57
+Scanning 9 hosts [1000 ports/host]
+Discovered open port 22/tcp on 10.241.13.16
+Discovered open port 135/tcp on 10.241.13.167
+Discovered open port 3389/tcp on 10.241.13.167
+Discovered open port 25/tcp on 10.241.13.21
+Discovered open port 21/tcp on 10.241.13.21
+Discovered open port 139/tcp on 10.241.13.21
+Discovered open port 139/tcp on 10.241.13.167
+Discovered open port 80/tcp on 10.241.13.201
+Discovered open port 80/tcp on 10.241.13.21
+Increasing send delay for 10.241.13.1 from 0 to 5 due to 13 out of 32 dropped probes since last increase.
+Increasing send delay for 10.241.13.21 from 0 to 5 due to 13 out of 32 dropped probes since last increase.
+Increasing send delay for 10.241.13.167 from 0 to 5 due to 11 out of 27 dropped probes since last increase.
+Increasing send delay for 10.241.13.201 from 0 to 5 due to 13 out of 32 dropped probes since last increase.
+Increasing send delay for 10.241.13.166 from 0 to 5 due to 11 out of 26 dropped probes since last increase.
+Discovered open port 445/tcp on 10.241.13.21
+Discovered open port 80/tcp on 10.241.13.167
+Discovered open port 80/tcp on 10.241.13.166
+Discovered open port 445/tcp on 10.241.13.167
+Discovered open port 111/tcp on 10.241.13.201
+Discovered open port 111/tcp on 10.241.13.166
+Discovered open port 22/tcp on 10.241.13.166
+Discovered open port 22/tcp on 10.241.13.201
+Increasing send delay for 10.241.13.166 from 5 to 10 due to 12 out of 29 dropped probes since last increase.
+Increasing send delay for 10.241.13.1 from 5 to 10 due to 11 out of 27 dropped probes since last increase.
+Increasing send delay for 10.241.13.21 from 5 to 10 due to 11 out of 27 dropped probes since last increase.
+Increasing send delay for 10.241.13.167 from 5 to 10 due to 11 out of 27 dropped probes since last increase.
+Increasing send delay for 10.241.13.16 from 0 to 5 due to 57 out of 142 dropped probes since last increase.
+Discovered open port 22/tcp on 10.241.13.78
+Discovered open port 22/tcp on 10.241.13.71
+Increasing send delay for 10.241.13.16 from 5 to 10 due to 11 out of 25 dropped probes since last increase.
+Increasing send delay for 10.241.13.201 from 5 to 10 due to 27 out of 67 dropped probes since last increase.
+Increasing send delay for 10.241.13.78 from 0 to 5 due to 17 out of 42 dropped probes since last increase.
+Increasing send delay for 10.241.13.78 from 5 to 10 due to 11 out of 24 dropped probes since last increase.
+Increasing send delay for 10.241.13.71 from 0 to 5 due to 29 out of 72 dropped probes since last increase.
+Increasing send delay for 10.241.13.71 from 5 to 10 due to 11 out of 25 dropped probes since last increase.
+Discovered open port 9/tcp on 10.241.13.167
+SYN Stealth Scan Timing: About 21.38% done; ETC: 19:00 (0:01:54 remaining)
+Discovered open port 17/tcp on 10.241.13.167
+Discovered open port 49155/tcp on 10.241.13.167
+Discovered open port 7/tcp on 10.241.13.167
+Discovered open port 19/tcp on 10.241.13.167
+Discovered open port 5357/tcp on 10.241.13.167
+SYN Stealth Scan Timing: About 39.74% done; ETC: 19:00 (0:01:33 remaining)
+Discovered open port 8649/tcp on 10.241.13.78
+Discovered open port 8649/tcp on 10.241.13.71
+Discovered open port 49152/tcp on 10.241.13.167
+Discovered open port 3128/tcp on 10.241.13.21
+Completed SYN Stealth Scan against 10.241.13.18 in 84.68s (8 hosts left)
+SYN Stealth Scan Timing: About 59.85% done; ETC: 19:00 (0:01:01 remaining)
+Discovered open port 49161/tcp on 10.241.13.167
+Discovered open port 49153/tcp on 10.241.13.167
+Discovered open port 49156/tcp on 10.241.13.167
+Discovered open port 13/tcp on 10.241.13.167
+Discovered open port 6667/tcp on 10.241.13.21
+Discovered open port 49154/tcp on 10.241.13.167
+Completed SYN Stealth Scan against 10.241.13.16 in 146.70s (7 hosts left)
+Completed SYN Stealth Scan against 10.241.13.1 in 150.90s (6 hosts left)
+Completed SYN Stealth Scan against 10.241.13.201 in 153.90s (5 hosts left)
+Completed SYN Stealth Scan against 10.241.13.166 in 154.30s (4 hosts left)
+Completed SYN Stealth Scan against 10.241.13.167 in 154.30s (3 hosts left)
+Completed SYN Stealth Scan against 10.241.13.21 in 157.30s (2 hosts left)
+Completed SYN Stealth Scan against 10.241.13.71 in 161.30s (1 host left)
+Completed SYN Stealth Scan at 19:00, 164.15s elapsed (9000 total ports)
+Initiating UDP Scan at 19:00
+Scanning 9 hosts [1000 ports/host]
+Discovered open port 111/udp on 10.241.13.166
+Discovered open port 111/udp on 10.241.13.201
+Increasing send delay for 10.241.13.167 from 0 to 50 due to 26 out of 64 dropped probes since last increase.
+Increasing send delay for 10.241.13.71 from 0 to 50 due to max_successful_tryno increase to 5
+Increasing send delay for 10.241.13.78 from 0 to 50 due to max_successful_tryno increase to 5
+Increasing send delay for 10.241.13.166 from 0 to 50 due to max_successful_tryno increase to 5
+Increasing send delay for 10.241.13.71 from 50 to 100 due to max_successful_tryno increase to 6
+Warning: 10.241.13.71 giving up on port because retransmission cap hit (6).
+Increasing send delay for 10.241.13.18 from 0 to 50 due to max_successful_tryno increase to 5
+Increasing send delay for 10.241.13.166 from 50 to 100 due to max_successful_tryno increase to 6
+Warning: 10.241.13.166 giving up on port because retransmission cap hit (6).
+Increasing send delay for 10.241.13.78 from 50 to 100 due to max_successful_tryno increase to 6
+Warning: 10.241.13.78 giving up on port because retransmission cap hit (6).
+Increasing send delay for 10.241.13.18 from 50 to 100 due to max_successful_tryno increase to 6
+Warning: 10.241.13.18 giving up on port because retransmission cap hit (6).
+Increasing send delay for 10.241.13.201 from 0 to 50 due to max_successful_tryno increase to 5
+Increasing send delay for 10.241.13.201 from 50 to 100 due to max_successful_tryno increase to 6
+Warning: 10.241.13.201 giving up on port because retransmission cap hit (6).
+Increasing send delay for 10.241.13.21 from 0 to 50 due to 11 out of 23 dropped probes since last increase.
+Increasing send delay for 10.241.13.166 from 100 to 200 due to 11 out of 15 dropped probes since last increase.
+Increasing send delay for 10.241.13.71 from 100 to 200 due to 11 out of 18 dropped probes since last increase.
+Increasing send delay for 10.241.13.21 from 50 to 100 due to max_successful_tryno increase to 5
+Increasing send delay for 10.241.13.16 from 0 to 50 due to max_successful_tryno increase to 5
+Increasing send delay for 10.241.13.21 from 100 to 200 due to max_successful_tryno increase to 6
+Increasing send delay for 10.241.13.16 from 50 to 100 due to max_successful_tryno increase to 6
+Warning: 10.241.13.16 giving up on port because retransmission cap hit (6).
+Warning: 10.241.13.21 giving up on port because retransmission cap hit (6).
+Increasing send delay for 10.241.13.78 from 100 to 200 due to 11 out of 17 dropped probes since last increase.
+Increasing send delay for 10.241.13.201 from 100 to 200 due to 11 out of 13 dropped probes since last increase.
+Increasing send delay for 10.241.13.18 from 100 to 200 due to 11 out of 15 dropped probes since last increase.
+UDP Scan Timing: About 13.03% done; ETC: 19:04 (0:03:27 remaining)
+Discovered open port 161/udp on 10.241.13.1
+Increasing send delay for 10.241.13.167 from 50 to 100 due to 104 out of 259 dropped probes since last increase.
+Increasing send delay for 10.241.13.71 from 200 to 400 due to 11 out of 11 dropped probes since last increase.
+Increasing send delay for 10.241.13.166 from 200 to 400 due to 11 out of 12 dropped probes since last increase.
+Increasing send delay for 10.241.13.201 from 200 to 400 due to 11 out of 14 dropped probes since last increase.
+Increasing send delay for 10.241.13.167 from 100 to 200 due to 11 out of 27 dropped probes since last increase.
+Increasing send delay for 10.241.13.18 from 200 to 400 due to 11 out of 12 dropped probes since last increase.
+Increasing send delay for 10.241.13.16 from 100 to 200 due to 11 out of 19 dropped probes since last increase.
+Increasing send delay for 10.241.13.78 from 200 to 400 due to 11 out of 16 dropped probes since last increase.
+Increasing send delay for 10.241.13.21 from 200 to 400 due to 11 out of 27 dropped probes since last increase.
+Increasing send delay for 10.241.13.71 from 400 to 800 due to 11 out of 18 dropped probes since last increase.
+Increasing send delay for 10.241.13.166 from 400 to 800 due to 11 out of 20 dropped probes since last increase.
+Increasing send delay for 10.241.13.201 from 400 to 800 due to 11 out of 13 dropped probes since last increase.
+Increasing send delay for 10.241.13.18 from 400 to 800 due to 11 out of 11 dropped probes since last increase.
+Increasing send delay for 10.241.13.78 from 400 to 800 due to 11 out of 15 dropped probes since last increase.
+Discovered open port 19/udp on 10.241.13.167
+Increasing send delay for 10.241.13.21 from 400 to 800 due to 11 out of 13 dropped probes since last increase.
+Completed UDP Scan against 10.241.13.1 in 60.66s (8 hosts left)
+Increasing send delay for 10.241.13.16 from 200 to 400 due to 15 out of 36 dropped probes since last increase.
+UDP Scan Timing: About 26.00% done; ETC: 19:05 (0:03:45 remaining)
+Increasing send delay for 10.241.13.16 from 400 to 800 due to 11 out of 11 dropped probes since last increase.
+Discovered open port 137/udp on 10.241.13.167
+Discovered open port 13/udp on 10.241.13.167
+UDP Scan Timing: About 29.82% done; ETC: 19:06 (0:04:16 remaining)
+Discovered open port 7/udp on 10.241.13.167
+Discovered open port 5353/udp on 10.241.13.16
+UDP Scan Timing: About 35.47% done; ETC: 19:07 (0:04:35 remaining)
+Discovered open port 5353/udp on 10.241.13.201
+Discovered open port 5353/udp on 10.241.13.71
+Discovered open port 5353/udp on 10.241.13.166
+Discovered open port 17/udp on 10.241.13.167
+Completed UDP Scan against 10.241.13.167 in 209.12s (7 hosts left)
+UDP Scan Timing: About 46.86% done; ETC: 19:10 (0:04:57 remaining)
+Discovered open port 123/udp on 10.241.13.16
+Discovered open port 137/udp on 10.241.13.21
+UDP Scan Timing: About 64.22% done; ETC: 19:13 (0:04:28 remaining)
+UDP Scan Timing: About 71.33% done; ETC: 19:14 (0:03:50 remaining)
+UDP Scan Timing: About 77.43% done; ETC: 19:14 (0:03:09 remaining)
+UDP Scan Timing: About 83.15% done; ETC: 19:15 (0:02:26 remaining)
+UDP Scan Timing: About 88.55% done; ETC: 19:15 (0:01:42 remaining)
+UDP Scan Timing: About 93.76% done; ETC: 19:15 (0:00:57 remaining)
+Completed UDP Scan against 10.241.13.16 in 937.52s (6 hosts left)
+Completed UDP Scan against 10.241.13.21 in 963.12s (5 hosts left)
+Completed UDP Scan against 10.241.13.78 in 974.52s (4 hosts left)
+Completed UDP Scan against 10.241.13.71 in 977.52s (3 hosts left)
+Completed UDP Scan against 10.241.13.201 in 979.12s (2 hosts left)
+Completed UDP Scan against 10.241.13.166 in 987.12s (1 host left)
+Completed UDP Scan at 19:18, 1060.75s elapsed (9000 total ports)
+Initiating Service scan at 19:18
+Scanning 1271 services on 9 hosts
+Service scan Timing: About 3.38% done; ETC: 19:44 (0:25:14 remaining)
+Service scan Timing: About 3.86% done; ETC: 19:56 (0:36:10 remaining)
+Service scan Timing: About 5.74% done; ETC: 19:59 (0:38:34 remaining)
+Service scan Timing: About 6.22% done; ETC: 20:05 (0:44:01 remaining)
+Service scan Timing: About 8.58% done; ETC: 20:09 (0:46:33 remaining)
+Service scan Timing: About 10.86% done; ETC: 20:07 (0:43:55 remaining)
+Service scan Timing: About 11.09% done; ETC: 20:11 (0:47:17 remaining)
+Service scan Timing: About 14.71% done; ETC: 20:09 (0:43:17 remaining)
+Service scan Timing: About 15.66% done; ETC: 20:14 (0:47:08 remaining)
+Service scan Timing: About 19.43% done; ETC: 20:11 (0:43:03 remaining)
+Service scan Timing: About 28.80% done; ETC: 20:14 (0:40:06 remaining)
+Service scan Timing: About 35.88% done; ETC: 20:15 (0:36:47 remaining)
+Service scan Timing: About 42.96% done; ETC: 20:16 (0:33:09 remaining)
+Service scan Timing: About 50.04% done; ETC: 20:17 (0:29:17 remaining)
+Service scan Timing: About 55.15% done; ETC: 20:16 (0:26:16 remaining)
+Service scan Timing: About 61.13% done; ETC: 20:18 (0:23:15 remaining)
+Service scan Timing: About 66.56% done; ETC: 20:17 (0:19:52 remaining)
+Service scan Timing: About 72.15% done; ETC: 20:18 (0:16:42 remaining)
+Service scan Timing: About 77.97% done; ETC: 20:18 (0:13:14 remaining)
+Service scan Timing: About 83.56% done; ETC: 20:17 (0:09:48 remaining)
+Service scan Timing: About 88.59% done; ETC: 20:17 (0:06:44 remaining)
+Service scan Timing: About 93.55% done; ETC: 20:16 (0:03:46 remaining)
+Discovered open port 1000/udp on 10.241.13.166
+Discovered open|filtered port 1000/udp on 10.241.13.166 is actually open
+Service scan Timing: About 98.66% done; ETC: 20:16 (0:00:46 remaining)
+Completed Service scan at 20:15, 3451.70s elapsed (1271 services on 9 hosts)
+Initiating OS detection (try #1) against 9 hosts
+adjust_timeouts2: packet supposedly had rtt of -167086 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -167086 microseconds.  Ignoring time.
+Retrying OS detection (try #2) against 2 hosts
+Initiating Traceroute at 20:16
+Completed Traceroute at 20:16, 1.02s elapsed
+Initiating Parallel DNS resolution of 10 hosts. at 20:16
+Completed Parallel DNS resolution of 10 hosts. at 20:16, 16.50s elapsed
+NSE: Script scanning 9 hosts.
+Initiating NSE at 20:16
+NSOCK ERROR [4717.8410s] mksock_bind_addr(): Bind to 0.0.0.0:111 failed (IOD #74): Address already in use (98)
+NSOCK ERROR [4861.9630s] mksock_bind_addr(): Bind to 0.0.0.0:679 failed (IOD #1325): Address already in use (98)
+NSOCK ERROR [4875.2930s] mksock_bind_addr(): Bind to 0.0.0.0:924 failed (IOD #1566): Address already in use (98)
+Completed NSE at 20:19, 195.31s elapsed
+Initiating NSE at 20:19
+Completed NSE at 20:19, 0.16s elapsed
+Nmap scan report for 10.241.13.1
+Host is up (0.0028s latency).
+Not shown: 1000 closed ports, 999 open|filtered ports
+PORT    STATE SERVICE VERSION
+161/udp open  snmp    Cisco SNMP service; ciscoSystems SNMPv3 server
+| snmp-hh3c-logins: 
+|_  baseoid: 1.3.6.1.4.1.25506.2.12.1.1.1
+| snmp-info: 
+|   enterprise: ciscoSystems
+|   engineIDFormat: mac
+|   engineIDData: 00:00:11:93:d0:5c
+|   snmpEngineBoots: 3
+|_  snmpEngineTime: 582d15h39m36s
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE (using port 23/tcp)
+HOP RTT     ADDRESS
+1   1.74 ms 10.241.13.1
+
+Nmap scan report for ece-ec521-016.bu.edu (10.241.13.16)
+Host is up (0.0010s latency).
+Not shown: 1927 closed ports, 70 open|filtered ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     lshd secure shell 2.1 (protocol 2.0)
+123/udp  open  ntp     NTP v4 (unsynchronized)
+| ntp-info: 
+|_  receive time stamp: 2016-10-07T21:37:40
+5353/udp open  mdns    DNS-based service discovery
+| dns-service-discovery: 
+|   9/tcp workstation
+|_    Address=10.241.13.16 fe80:0:0:0:5054:ff:fe57:3bf6
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.0
+Uptime guess: 5.281 days (since Fri Oct  7 13:34:32 2016)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 23/tcp)
+HOP RTT     ADDRESS
+1   0.69 ms 128.197.55.1
+2   0.78 ms ece-ec521-016.bu.edu (10.241.13.16)
+
+Nmap scan report for ece-ec521-018.bu.edu (10.241.13.18)
+Host is up (0.0011s latency).
+Not shown: 1000 filtered ports, 978 closed ports
+PORT      STATE         SERVICE         VERSION
+69/udp    open|filtered tftp
+111/udp   open|filtered rpcbind
+407/udp   open|filtered timbuktu
+623/udp   open|filtered asf-rmcp
+686/udp   open|filtered hcp-wismar
+826/udp   open|filtered unknown
+997/udp   open|filtered maitrd
+1719/udp  open|filtered h323gatestat
+2161/udp  open|filtered apc-2161
+17814/udp open|filtered unknown
+21167/udp open|filtered unknown
+21609/udp open|filtered unknown
+21702/udp open|filtered unknown
+22045/udp open|filtered unknown
+24594/udp open|filtered unknown
+28493/udp open|filtered unknown
+32528/udp open|filtered unknown
+32773/udp open|filtered sometimes-rpc10
+33717/udp open|filtered unknown
+42434/udp open|filtered unknown
+43195/udp open|filtered unknown
+49393/udp open|filtered unknown
+Too many fingerprints match this host to give specific OS details
+Network Distance: 2 hops
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT     ADDRESS
+-   Hop 1 is the same as for 10.241.13.16
+2   1.25 ms ece-ec521-018.bu.edu (10.241.13.18)
+
+Nmap scan report for signals10net-01.bu.edu (10.241.13.21)
+Host is up (0.00089s latency).
+Not shown: 1951 closed ports, 41 open|filtered ports
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd 3.0.2
+25/tcp   open  smtp        Postfix smtpd
+|_smtp-commands: mary008-0302-dhcp-110.bu.edu, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, 
+| ssl-cert: Subject: commonName=mary008-0302-dhcp-110.bu.edu
+| Issuer: commonName=mary008-0302-dhcp-110.bu.edu
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2016-10-02T20:33:05
+| Not valid after:  2026-09-30T20:33:05
+| MD5:   b98f 5205 e6d4 31a2 f7ac 74a9 9cb2 2c12
+|_SHA-1: 7c60 f1e4 f038 6438 1d2d 89fd 3282 2009 e490 7170
+|_ssl-date: TLS randomness does not represent time
+80/tcp   open  http        Apache httpd 2.4.7 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+|_http-title: Apache2 Ubuntu Default Page: It works
+139/tcp  open  netbios-ssn Samba smbd 3.X (workgroup: MARY008-0302-DHCP-110)
+445/tcp  open  netbios-ssn Samba smbd 3.X (workgroup: MARY008-0302-DHCP-110)
+3128/tcp open  http-proxy  Squid http proxy 3.3.8
+|_http-server-header: squid/3.3.8
+|_http-title: ERROR: The requested URL could not be retrieved
+6667/tcp open  irc         IRCnet ircd
+| irc-info: 
+|   users: 1
+|   servers: 1
+|   chans: 15
+|   lusers: 1
+|   lservers: 0
+|   server: irc.localhost
+|   version: 2.11.2p2. irc.localhost 000A 
+|   uptime: 4 days, 3:16:31
+|   source ident: NONE or BLOCKED
+|   source host: mary008-0305-dhcp-126.bu.edu
+|_  error: Closing Link: hkusyzfps[~nmap@mary008-0305-dhcp-126.bu.edu] ("")
+137/udp  open  netbios-ns  Microsoft Windows NT netbios-ssn (workgroup: WORKGROUP)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.0
+Uptime guess: 4.141 days (since Sat Oct  8 16:55:50 2016)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=259 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Hosts:  mary008-0302-dhcp-110.bu.edu, irc.localhost, MARY008-0302-DH; OSs: Unix, Windows NT; CPE: cpe:/o:microsoft:windows_nt
+
+Host script results:
+| nbstat: NetBIOS name: MARY008-0302-DH, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   MARY008-0302-DH<00>  Flags: <unique><active>
+|   MARY008-0302-DH<03>  Flags: <unique><active>
+|   MARY008-0302-DH<20>  Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|_  WORKGROUP<1e>        Flags: <group><active>
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.3.11-Ubuntu)
+|   Computer name: mary008-0302-dhcp-110
+|   NetBIOS computer name: MARY008-0302-DHCP-110
+|   Domain name: bu.edu
+|   FQDN: mary008-0302-dhcp-110.bu.edu
+|_  System time: 2016-10-06T19:49:06-04:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smbv2-enabled: Server supports SMBv2 protocol
+
+TRACEROUTE (using port 23/tcp)
+HOP RTT     ADDRESS
+-   Hop 1 is the same as for 10.241.13.16
+2   0.56 ms signals10net-01.bu.edu (10.241.13.21)
+
+Nmap scan report for signals10net-51.bu.edu (10.241.13.71)
+Host is up (0.00078s latency).
+Not shown: 1712 closed ports, 268 filtered ports
+PORT      STATE         SERVICE      VERSION
+22/tcp    open          ssh          OpenSSH 5.3 (protocol 1.99)
+| ssh-hostkey: 
+|   2048 7c:73:bf:ec:81:f3:c2:99:fa:48:1b:8b:eb:49:64:de (RSA1)
+|   1024 e3:6b:8a:99:f5:be:98:e0:c3:5f:08:f2:bf:0a:09:86 (DSA)
+|_  2048 dc:fc:c1:a9:6a:4f:f4:a2:34:59:75:fc:34:b6:2b:6e (RSA)
+|_sshv1: Server supports SSHv1
+8649/tcp  open          ganglia      Ganglia XML Grid monitor
+| ganglia-info: 
+|   Ganglia Version: 3.7.2
+|   Cluster 1: 
+|     Name: ece-signals
+|_    Owner: unspecified
+21/udp    open|filtered ftp
+69/udp    open|filtered tftp
+1719/udp  open|filtered h323gatestat
+2161/udp  open|filtered apc-2161
+5353/udp  open          mdns         DNS-based service discovery
+| dns-service-discovery: 
+|   9/tcp workstation
+|     Address=10.241.13.71 fe80:0:0:0:4639:c4ff:fe34:9267
+|   22/tcp ssh
+|_    Address=10.241.13.71 fe80:0:0:0:4639:c4ff:fe34:9267
+17573/udp open|filtered unknown
+18617/udp open|filtered unknown
+18869/udp open|filtered unknown
+19415/udp open|filtered unknown
+21111/udp open|filtered unknown
+21566/udp open|filtered unknown
+21702/udp open|filtered unknown
+22045/udp open|filtered unknown
+24594/udp open|filtered unknown
+32528/udp open|filtered unknown
+33717/udp open|filtered unknown
+43195/udp open|filtered unknown
+49179/udp open|filtered unknown
+Device type: general purpose
+Running: Linux 2.6.X|3.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6 cpe:/o:linux:linux_kernel:3
+OS details: Linux 2.6.32 - 3.10
+Uptime guess: 3.345 days (since Sun Oct  9 12:02:55 2016)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=258 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 3389/tcp)
+HOP RTT     ADDRESS
+-   Hop 1 is the same as for 10.241.13.16
+2   0.82 ms signals10net-51.bu.edu (10.241.13.71)
+
+Nmap scan report for signals10net-58.bu.edu (10.241.13.78)
+Host is up (0.00081s latency).
+Not shown: 1710 closed ports, 266 filtered ports
+PORT      STATE         SERVICE    VERSION
+22/tcp    open          ssh        OpenSSH 5.3 (protocol 1.99)
+| ssh-hostkey: 
+|   2048 66:a2:ea:68:b9:df:c6:dc:c0:5f:b0:8e:81:e1:c6:6e (RSA1)
+|   1024 4c:91:c0:90:6b:62:94:31:04:09:48:e1:72:6f:02:b5 (DSA)
+|_  2048 35:a8:1c:7a:91:f5:0c:f4:69:94:bb:ad:90:81:87:8a (RSA)
+|_sshv1: Server supports SSHv1
+8649/tcp  open          ganglia    Ganglia XML Grid monitor 3.7.2 (Cluster name: ece-signals; Owner: unspecified; Source: gmond)
+| ganglia-info: 
+|   Ganglia Version: 3.7.2
+|   Cluster 1: 
+|     Name: ece-signals
+|_    Owner: unspecified
+21/udp    open|filtered ftp
+69/udp    open|filtered tftp
+686/udp   open|filtered hcp-wismar
+826/udp   open|filtered unknown
+17814/udp open|filtered unknown
+18319/udp open|filtered unknown
+18869/udp open|filtered unknown
+19374/udp open|filtered unknown
+19415/udp open|filtered unknown
+20366/udp open|filtered unknown
+21111/udp open|filtered unknown
+21167/udp open|filtered unknown
+21609/udp open|filtered unknown
+21702/udp open|filtered unknown
+23679/udp open|filtered unknown
+28493/udp open|filtered unknown
+32528/udp open|filtered unknown
+33717/udp open|filtered unknown
+42434/udp open|filtered unknown
+43195/udp open|filtered unknown
+49350/udp open|filtered unknown
+49393/udp open|filtered unknown
+Device type: general purpose
+Running: Linux 2.6.X|3.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6 cpe:/o:linux:linux_kernel:3
+OS details: Linux 2.6.32 - 3.10
+Uptime guess: 6.154 days (since Thu Oct  6 16:37:56 2016)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=263 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 3389/tcp)
+HOP RTT     ADDRESS
+-   Hop 1 is the same as for 10.241.13.16
+2   0.75 ms signals10net-58.bu.edu (10.241.13.78)
+
+Nmap scan report for 10.241.13.166
+Host is up (0.00086s latency).
+Not shown: 1981 closed ports
+PORT      STATE         SERVICE      VERSION
+22/tcp    open          ssh          OpenSSH 6.7p1 Debian 5+deb8u3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 db:89:e5:52:64:8f:b4:c9:e8:db:f5:08:ec:58:74:42 (DSA)
+|   2048 d5:92:b4:84:31:97:2e:e2:fc:80:8c:0a:c5:7b:4e:07 (RSA)
+|_  256 3f:e8:c0:70:6f:a3:98:3d:e5:77:0d:9f:96:bd:7b:fd (ECDSA)
+80/tcp    open          http         Apache httpd 2.4.10 ((Debian))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 1 disallowed entry 
+|_/images
+|_http-server-header: Apache/2.4.10 (Debian)
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+111/tcp   open          rpcbind      2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100024  1          50472/udp  status
+|_  100024  1          53890/tcp  status
+69/udp    open|filtered tftp
+111/udp   open          rpcbind      2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100024  1          50472/udp  status
+|_  100024  1          53890/tcp  status
+631/udp   open|filtered ipp
+1000/udp  open          rpcbind      2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100024  1          50472/udp  status
+|_  100024  1          53890/tcp  status
+1048/udp  open|filtered neod2
+1719/udp  open|filtered h323gatestat
+1900/udp  open|filtered upnp
+5353/udp  open          mdns         DNS-based service discovery
+| dns-service-discovery: 
+|   9/tcp workstation
+|_    Address=10.241.13.166 fe80:0:0:0:5054:ff:fee6:3c7d
+18617/udp open|filtered unknown
+19415/udp open|filtered unknown
+21111/udp open|filtered unknown
+21566/udp open|filtered unknown
+23679/udp open|filtered unknown
+33717/udp open|filtered unknown
+41524/udp open|filtered unknown
+43195/udp open|filtered unknown
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.0
+Uptime guess: 0.167 days (since Wed Oct 12 16:19:27 2016)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 23/tcp)
+HOP RTT     ADDRESS
+-   Hop 1 is the same as for 10.241.13.16
+2   0.92 ms 10.241.13.166
+
+Nmap scan report for 10.241.13.167
+Host is up (0.0011s latency).
+Not shown: 1966 closed ports
+PORT      STATE         SERVICE            VERSION
+7/tcp     open          echo
+9/tcp     open          discard?
+13/tcp    open          daytime            Microsoft Windows USA daytime
+17/tcp    open          qotd               Windows qotd (English)
+19/tcp    open          chargen
+80/tcp    open          http               Microsoft IIS httpd 7.5
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/7.5
+|_http-title: IIS7
+135/tcp   open          msrpc              Microsoft Windows RPC
+139/tcp   open          netbios-ssn        Microsoft Windows 98 netbios-ssn
+445/tcp   open          microsoft-ds       Microsoft Windows 10 microsoft-ds
+3389/tcp  open          ssl/ms-wbt-server?
+| ssl-cert: Subject: commonName=admin-PC
+| Issuer: commonName=admin-PC
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2016-10-06T14:48:46
+| Not valid after:  2017-04-07T14:48:46
+| MD5:   7755 d2e0 7849 e527 aaa8 76c4 2b68 d988
+|_SHA-1: bbeb 7d82 a13a 901a 6f5e 972f de78 d857 01cc 3640
+|_ssl-date: 2016-10-13T03:56:11+00:00; +3h37m02s from scanner time.
+5357/tcp  open          http               Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Service Unavailable
+49152/tcp open          msrpc              Microsoft Windows RPC
+49153/tcp open          msrpc              Microsoft Windows RPC
+49154/tcp open          msrpc              Microsoft Windows RPC
+49155/tcp open          msrpc              Microsoft Windows RPC
+49156/tcp open          msrpc              Microsoft Windows RPC
+49161/tcp open          msrpc              Microsoft Windows RPC
+7/udp     open          echo
+9/udp     open|filtered discard
+13/udp    open          daytime            Windows small service daytime
+17/udp    open          qotd               Windows qotd (English)
+19/udp    open          chargen
+69/udp    open|filtered tftp
+123/udp   open|filtered ntp
+137/udp   open          netbios-ns         Microsoft Windows netbios-ssn (workgroup: WORKGROUP)
+138/udp   open|filtered netbios-dgm
+161/udp   open|filtered snmp
+| snmp-hh3c-logins: 
+|_  baseoid: 1.3.6.1.4.1.25506.2.12.1.1.1
+500/udp   open|filtered isakmp
+520/udp   open|filtered route
+623/udp   open|filtered asf-rmcp
+1900/udp  open|filtered upnp
+3702/udp  open|filtered ws-discovery
+4500/udp  open|filtered nat-t-ike
+5355/udp  open|filtered llmnr
+Device type: general purpose|media device
+Running: Microsoft Windows 2008|10|7|8.1, Microsoft embedded
+OS CPE: cpe:/o:microsoft:windows_server_2008::sp2 cpe:/o:microsoft:windows_10 cpe:/h:microsoft:xbox_one cpe:/o:microsoft:windows_7::- cpe:/o:microsoft:windows_7::sp1 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_8.1
+OS details: Microsoft Windows Server 2008 SP2 or Windows 10 Tech Preview or Xbox One, Microsoft Windows 7 SP0 - SP1, Windows Server 2008 SP1, Windows 8, or Windows 8.1 Update 1
+Uptime guess: 0.164 days (since Wed Oct 12 16:23:13 2016)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: Host: ADMIN-PC; OSs: Windows, Windows 98, Windows 10; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_98, cpe:/o:microsoft:windows_10
+
+Host script results:
+| nbstat: NetBIOS name: ADMIN-PC, NetBIOS user: <unknown>, NetBIOS MAC: 52:54:00:e7:5a:aa (QEMU virtual NIC)
+| Names:
+|   ADMIN-PC<20>         Flags: <unique><active>
+|   ADMIN-PC<00>         Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|_  WORKGROUP<1e>        Flags: <group><active>
+| smb-os-discovery: 
+|   OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)
+|   OS CPE: cpe:/o:microsoft:windows_7::sp1:professional
+|   Computer name: admin-PC
+|   NetBIOS computer name: ADMIN-PC
+|   Workgroup: WORKGROUP
+|_  System time: 2016-10-12T20:52:58-07:00
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smbv2-enabled: Server supports SMBv2 protocol
+
+TRACEROUTE (using port 23/tcp)
+HOP RTT     ADDRESS
+-   Hop 1 is the same as for 10.241.13.16
+2   0.84 ms 10.241.13.167
+
+Nmap scan report for 10.241.13.201
+Host is up (0.00081s latency).
+Not shown: 1970 closed ports
+PORT      STATE         SERVICE         VERSION
+22/tcp    open          ssh             OpenSSH 6.7p1 Debian 5+deb8u3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 bd:83:be:3e:ba:31:ea:8a:f2:51:41:11:b0:bf:0f:87 (DSA)
+|   2048 b5:9d:fd:24:3b:4e:5f:03:31:9c:2c:c8:0c:51:5f:80 (RSA)
+|_  256 e1:5b:ec:ad:9c:71:da:cf:5e:ec:f9:11:73:ba:ff:dc (ECDSA)
+80/tcp    open          http            Apache httpd 2.4.10 ((Debian))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 3 disallowed entries 
+|_/hiddenUser-agent: * /amazonia /hidden
+|_http-server-header: Apache/2.4.10 (Debian)
+|_http-title: SUPER SECURE MEMBERS ONLY
+111/tcp   open          rpcbind         2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100024  1          41735/udp  status
+|_  100024  1          52730/tcp  status
+22/udp    open|filtered ssh
+69/udp    open|filtered tftp
+111/udp   open          rpcbind         2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100024  1          41735/udp  status
+|_  100024  1          52730/tcp  status
+513/udp   open|filtered who
+1000/udp  open|filtered ock
+1346/udp  open|filtered alta-ana-lm
+1900/udp  open|filtered upnp
+5353/udp  open          mdns            DNS-based service discovery
+| dns-service-discovery: 
+|   9/tcp workstation
+|_    Address=10.241.13.201 fe80:0:0:0:5054:ff:fe78:55d4
+16086/udp open|filtered unknown
+16449/udp open|filtered unknown
+17018/udp open|filtered unknown
+17824/udp open|filtered unknown
+18676/udp open|filtered unknown
+19500/udp open|filtered unknown
+19718/udp open|filtered unknown
+20154/udp open|filtered unknown
+20851/udp open|filtered unknown
+21247/udp open|filtered unknown
+21556/udp open|filtered unknown
+23980/udp open|filtered unknown
+27195/udp open|filtered unknown
+31731/udp open|filtered unknown
+32776/udp open|filtered sometimes-rpc16
+33459/udp open|filtered unknown
+36893/udp open|filtered unknown
+49166/udp open|filtered unknown
+58178/udp open|filtered unknown
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.0
+Uptime guess: 0.170 days (since Wed Oct 12 16:14:33 2016)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 23/tcp)
+HOP RTT     ADDRESS
+-   Hop 1 is the same as for 10.241.13.16
+2   0.75 ms 10.241.13.201
+
+NSE: Script Post-scanning.
+Initiating NSE at 20:19
+Completed NSE at 20:19, 0.00s elapsed
+Initiating NSE at 20:19
+Completed NSE at 20:19, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (9 hosts up) scanned in 4900.14 seconds
+           Raw packets sent: 35837 (1.366MB) | Rcvd: 24072 (1.134MB)
+
+
+
+
+

@@ -1,0 +1,238 @@
+Problem 0:
+
+- Ethical Basis:
+	My ethical basis stands on a mix incorporating professionalism, Christian religious belief and moral, and the following moral theories: Divine Command Theory and Virtue Ethics, such as acting in accordance with reason, and Utilitarianism, where "right and wrong is determined by the overall goodness (utility) of the consequences of action." I also agree that in some cases "The ends justify the means," as Niccolò Machiavelli stated. As well as aligning with the Ten Commandments of Computer Ethics. 
+
+- References:
+	http://home.sandiego.edu/~baber/gender/MoralTheories.html
+	http://computerethicsinstitute.org/publications/tencommandments.html
+	The Holy Bible and the thoughts of the Christian Church
+
+a. Downloading a text version of Shakespeare's Romeo and Juliet from PirateBay.
+
+i)	- Illegal: Only if the copyright on the work has not expired and is still under copyright by the country in which it was published, than downloading a copy of it is illegal. 
+	- Legal: Since the copyright of the work has expired and falls into the public domain under the both countries' copyright laws. For example, with Romeo and Juliet both the US and UK copyright laws state that the work falls into the public domain 70 years after the death of the author. William Shakespeare died in 1616, so downloading it off of PirateBay would be legal.  
+
+	References: 
+	http://copyright.gov/legislation/pl105-304.pdf
+	http://www.copyright.gov/title17/circ92.pdf
+	http://outofcopyright.eu/
+	http://copyright.cornell.edu/resources/publicdomain.cfm
+
+ii) - Unethical: Since it is not your original work and you are not paying for it in anyway, you are demeaning the work's value, thus demoralizing it. Also based on your intents for the work, downloading it can make the action an unethical. For example, if you intend on printing the text and distributing to a class of students in the same format and quality as a publisher who has an agreement with the professor, class, or university to charge for the printed material in the same quality already.   
+
+	- Ethical: Downloading a text version of the work will be ethical since it is considered peer-to-peer file sharing, which is a legal act. As well as using the website PirateBay to download it. Even if you are on the BU network and / or using a BU computer. Under BU's P2P & File sharing guidelines since the work is no longer copyrighted than it does not fall under the following: "Downloading or distributing copyrighted material without explicit permission from the copyright owner is illegal" 
+
+	- References:
+		http://www.bu.edu/tech/services/support/networks/wired/p2p/
+		http://www.bu.edu/tech/about/policies/computing-ethics/
+		http://www.bu.edu/tech/services/security/cyber-security/dmca/copyright/
+
+iii) Based on my research, findings, background knowledge and opinion this is legal and ethical since Romeo and Juliet is in the public domain, you are using it for yourself, such as for educational purposes, do not have malicious intend for the text and you are not knowingly downloading a risky file on a secure network. For instance, as long as you are downloading it on secure home, network and you believe the file to be healthy and it will not give anyone else access to your computer, whom could do damage once connected to another shared network, such as remote accessing your computer and university account on the school network. 
+
+e. Publicizing a remote access vulnerability in Tesla's model S cars that could only be fixed with a world-wide recall.
+
+i)	- Illegal: The is illegal under the following circumstances:
+		1. The vulnerability was discovered by hacking a car you do not own without permission or obtaining the information in an unlawful manner. 
+		2. Having malicious intent with the information obtained or altering the Tesla's code or software that do "not infringe on the manufacturer’s software copyright."
+		3. You do not notify Tesla and give them ample time to respond and react, approximately 90 days. 
+		You exploit the vulnerability and use it for malicious intent. 
+		4. You publicize the vulnerability without notifying Tesla and it leads to harm or damage to any property or persons. 
+
+	- Legal: The act is illegal under the following circumstances:
+		1. When discovering the vulnerability, the hacker hacked a vehicle he owned in order to discover this vulnerability or discovered it by other legal means. 
+		2. The vulnerability was publicized after contacting Tesla and giving them an ample amount of time, approximately 90 days, to respond and correct or patch the vulnerability. 
+		3. Publicizing the vulnerability did not cause harm or damage to any person or property, specifically found under the U.S. Code § 1030 - Fraud and related activity in connection with computers. As if Tesla hired to find vulnerabilities in their model S and they provided the recall before you publicized it. 
+
+	- References:
+		http://www.copyright.gov/legislation/dmca.pdf
+		https://www.theguardian.com/business/2015/oct/28/its-ok-to-hack-your-own-car-us-copyright-authorities-rule
+		https://www.law.cornell.edu/uscode/text/18/1030
+		http://hackaday.com/2015/10/30/eff-granted-dmca-exemption-hacking-your-own-car-is-legal-for-now/
+		https://www.congress.gov/107/bills/hr3482/BILLS-107hr3482rfs.pdf
+
+ii) - Unethical: The act is unethical if the you obtained knowledge of the vulnerability by unlawful means, did not contact the company, used the knowledge for malicious intent and / or publicizing the vulnerability led to any type of damage or harm, or other unethical actions. 
+
+	- Ethical: The act is ethical if you follow the lawful protocol of obtaining information of the vulnerability lawfully, without stealing, infringing on someone else’s property or not causing harm to anyone. As well as if you properly notified Tesla of the vulnerability and giving them ample amount of time to respond before publicizing the information. It would be even more ethical if you discovered a solution for the vulnerability and gave it to Tesla, giving them time to provide the recall solution before publicizing it. 
+
+	- References:
+		https://www.washingtonpost.com/postlive/the-ethics-of-hacking-101/2014/10/07/39529518-4014-11e4-b0ea-8141703bbf6f_story.html
+		http://www.nationalcybersecurityinstitute.org/general-public-interests/ethics-in-cyber-security/
+		http://computerethicsinstitute.org/publications/tencommandments.html
+		https://books.google.com/books?hl=en&lr=&id=EZyEq3TcLQQC&oi=fnd&pg=PT23&dq=us+cybersecurity+ethics&ots=R2iBfYeycI&sig=Mdo0tOO-Y1qvP2FYqCMsi5HcNNU#v=onepage&q=us%20cybersecurity%20ethics&f=false
+
+iii) Based on my research, background knowledge and personal opinion on ethics it would be ethical to publicize the vulnerability only if it was obtained in a lawful, ethical way, Tesla was notified prior to publication and given ample time to send out a solution to the recall, none of your actions in the process led to harm or damage, no copyright or legal agreements were broken, and Tesla refused to publicize the vulnerability themselves or gave you consent to publicize it such as if this were a research exercise with Tesla's knowledge.
+
+h. Collecting wifi MAC addresses in a shopping mall to track shoppers' movement. 
+
+i)	- Illegal: According to the US Patriot Act, the EPCA, and a case that was decided through the Federal Trade Commission regarding a technology that enabled retailers to track shoppers, the act is illegal if the shoppers are not notified, aware that they are being tracked, and have not way of opting out or they opt out but I tracked regardless. 
+
+	- Legal: According the sources described the act is legal as long as the shoppers are aware they are being tracked, via a sign when entering the store or mall, are notify how this information is going to be used, and have an option to opt out. Thus are not tracked after opting out.  
+
+	- References:
+		https://www.gpo.gov/fdsys/pkg/BILLS-107hr3162enr/pdf/BILLS-107hr3162enr.pdf
+		https://it.ojp.gov/privacyliberty/authorities/statutes/1285
+		https://www.ftc.gov/news-events/press-releases/2015/04/retail-tracking-firm-settles-ftc-charges-it-misled-consumers
+
+ii)	- Unethical: The act is unethical if the users' information is used without their notification and used for obtaining for malicious activity, such as obtaining access to their devices or their information is sold to another party, etc. 
+
+	- Ethical: The act is ethical is the shoppers are aware, the mall or shopping entity is the one conducting the tracking or knows this is being done for non-malicious reasons, such as research, and the shoppers information is not forwarded to others whom may cause harm or damage. 
+
+	- References:
+		Please see above
+
+iii) Based on my research, background and personal opinion the act is lawful and ethical as long as the shoppers are notified, the information is being collected by the mall or store entity for non-malicious purposes, or is aware the tracking is going on, the shoppers are given the option to opt out and are not tracked in doing so, are notified how their information is to be used, and no other damage, copyright, or harm is caused in the process. 
+
+I. Hiring a graduate student from Tuvalu on Course Hero to complete this homework for you for $100.
+
+i)	- Illegal: The act may be illegal if by gathering the answers to the questions the person or organization that is being paid conducts unlawful acts by breaking any of the laws stated in the referenced acts below, that could be penalized with sanctions such as fines and jail time. This would include acts of committing fraud or copyright laws by not referencing the sources and/or using another third parties work.   
+
+
+	- Legal: The act would be legal if the person being paid doesn't commit any acts that break any laws and it is the own person's work. Even though you may be using it, you are paying for their legitimate service, which is not illegal. 
+
+	- References: 
+		Cybersecurity Enhancement Act: https://www.congress.gov/bill/107th-congress/house-bill/3482/text
+		Digital Millenium Copyright Act (1998): http://copyright.gov/legislation/dmca.pdf
+		Electronic Communication Privacy Act (1986): https://it.ojp.gov/privacyliberty/authorities/statutes/1285
+		Computer Fraud and Abuse Act (1984): http://energy.gov/sites/prod/files/cioprod/documents/ComputerFraud-AbuseAct.pdf
+
+
+ii)	- Unethical: The act is unethical since the BU Academic Conduct Code states that any student should not be found "Representing the work of another as one’s own." In addition, not disclosing that you hired a student from Tuvalu through Course Hero as a "collaborator" on your homework would be against the class' course policy.  
+
+	- Ethical: The act would be ethical if it were allowed by both the university’s code of academic conduct and the course policy. Verifying that the professor allowed this work to be submitted. If would also be ethical if you completed the homework yourself and did not hire or receive the solutions until after your own work was submitted, not being able to go back to change your answers. 
+
+	- References:
+		BU Academic Code of Conduct: https://www.bu.edu/academics/policies/academic-conduct-code/
+		BU Policy on Computing Ethics: https://www.bu.edu/dos/policies/lifebook/computing-ethics/
+		Cybersecurity Ethics: http://www.nationalcybersecurityinstitute.org/general-public-interests/ethics-in-cyber-security/
+		EC521 Course Policy: https://algorithmics.bu.edu/fw/EC521/CoursePolicy
+		EC521 Course Policy: https://algorithmics.bu.edu/fw/EC521/CoursePolicy
+
+iii) Based on my researh, background and personal opinion the act is legal but is unethical due do the fact that you are may be submitting someone else's work as your own and going against the unviersity and course policies. Even if you don't submit the homework, paying someone else to do it for you is still unethical and not professional based on professional ethical standards, as referenced above. 
+
+
+----------
+
+Problem 1:
+
+My target was Louis Polcari.
+I began my elicitation by first searching his name on google, looking for his Linkedin and Facebook account. I was able to login to my profile on each site and find Luis' Facebook (https://www.facebook.com/louis.polcari/map) and Linkedin (https://www.linkedin.com/in/louis-polcari-25a97331?authType=NAME_SEARCH&authToken=P1aV&locale=en_US&srchid=1560933871473792801707&srchindex=1&srchtotal=4&trk=vsrp_people_res_name&goback=) account.
+
+I also searched the BU Directory for his name and found the following information which matched to the information on his other accounts, such as BU email.
+BU Directory Results: (http://www.bu.edu/phpbin/directory/?q=Louis+Polcari):
+
+	Polcari, Louis, Edward
+	CollegeMET - Metropolitan CollegeStatusGraduateEmaillpolcari@bu.edu University Data
+	NamePolcari, Louis, Edward Account Info
+	AliaslpolcariIndex idX193729
+
+I was also to find a few public records that seemed to be related to the correct person (https://www.intelius.com/search/people/Louis-Polcari/MA?adword=123). Here I was able to determine that may be related to him, one of them having a middle initial of "F" (i.e. Fannie F Polcari).
+
+Upon my findings I was able to connect with him on Linkedin and on Facebook, as well as email asking to possibly obtain further answers to the questions. In addition to approaching him in class and becoming new acquaintances. 
+
+As a result, I was able to obtain the answers to the questions:
+a. none
+b. Manhattan crepe from Crispy Crepe Cafe. Approximate calorie count = 200
+c. Fannie Fortunnata Polcari is my sister. My mother doesn't have a middle name but her maiden name is Paredes. My father's middle name is Joseph.
+
+---++ Problem 2 [40 points] - Information Gathering
+
+_Your solution is entered here_
+
+a. First I began my investigation by searching for "Harvard Privacy and Risk Officer" (https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=harvard+IT+and+Risk+officer). This gave two main results to the IT Harvard site, which I searched first, giving me her name, department, position, and email. 
+   1. Information Security | Harvard University Information Technology (http://huit.harvard.edu/pages/information-security)
+      * Result: 
+            Tracy Walden	Privacy & IT Risk Officer	twalden@fas.harvard.edu
+   2. Harvard Central Administration | Information Security (http://security.harvard.edu/people/people-type/harvard-central-administration)
+      * Result:      
+            Tracy Walden
+            Harvard University IT (HUIT) Information Security Group
+            Security Risk Officer
+            tracy_walden@harvard.edu
+  
+Upon further investigation I was able to obtain her office phone number and location:
+
+	Site: http://www.harvard.edu/copyright-issue
+	Full Information:
+		Tracy Walden
+		Harvard University Information Technology
+		IT Security | Policy, Risk and Compliance
+		+1.617.496.8515
+		1414 Massachusetts Avenue, Room 346
+		Cambridge, MA 02138
+		Email: dmca@harvard.edu
+
+I was also able to search the open source MA yellow pages obtaining her full name including middle initial, personal address and phone number.(http://people.yellowpages.com/whitepages/show?fp=eyJmaXJzdCI6IlRyYWN5IiwibGFzdCI6IldhbGRlbiIsInN0cmVldCI6IjQgT2xkIFNhbGVtIFBhdGgiLCJjaXR5IjoiR2xvdWNlc3RlciIsInN0YXRlIjoiTUEiLCJwaG9uZSI6Ijk3OC01MjUtMzg0NCIsInppcCI6IjAxOTMwIn0%3D&form=sbn)
+	Information:
+		Tracy L Walden
+		4 Old Salem Path, Gloucester, MA 01930
+		(978) 525-3844
+
+Unfortunately I was unable to obtain a photo that highly corresponded to Tracy, even after searching Google images, Facebook and Linkedin. 
+
+------
+
+b. First I did a Google search for "CVE-2012-3448 vulnerability" to find out exactly what the vulnerability consisted of. 
+	* Results: 
+		1. https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-3448
+		2. https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3448
+
+	Next I looked for vulnerability search terms using the exploit database: https://www.exploit-db.com/google-hacking-database/?action=search&ghdb_search_cat_id=0&ghdb_search_text=ganglia
+
+	Then I searched google for ""Ganglia Web Frontend version < 3.4" inurl:"edu""
+
+	Leading to find that all servers on the SRV365-CEWIT cluster at Stony Brooke University are running Ganglia Web Frontend version 3.4.2: http://ftp100.cewit.stonybrook.edu/ganglia/
+
+	I went further to reach out to Stony Brook University IT in writing:
+
+		"To whom this may concern, 
+
+		I am reaching in order to notify you that I have detected vulnerable Stony Brook University servers. This is due to running an out dated web front end version. 
+
+		The vulnerability is called "CVE-2012-3448" and is described as an "Unspecified vulnerability in Ganglia Web version before 3.5.1 which allows remote attackers to execute arbitrary PHP code via unknown attack vectors." Please see https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3448 for further reference. 
+
+		I have found that all servers running on the Stony Brook University server cluster "SRV365-CEWIT" can be exploited due to this vulnerability since they are running a Ganglia Web Frontend Version earlier than 3.5.1. They seem to be running Ganglia Web Frontend Version 3.4.2.
+
+		I would advise looking further into this vulnerability and making the necessary updates to avoid exploitation by anyone looking to conduct malicious activity.
+
+		I would greatly appreciate a response when this feedback is received. I stumbled upon this vulnerability due to a cybersecurity class activity and would receive further credit if I receive your response. 
+
+		Please feel free to reach out to me at: nvmusella@gmail.com
+
+		Thank you. 
+
+		Sincerely,
+		Nicholas Musella"
+
+	I have not yet received a reply from the Stony Brooke IT department at this time. 
+
+--------
+
+c. I first started by searching Google for "peoplesoft version harvard". Upon which I found an article in the Harvard Administration News published on Sept. 15, 2015. This is when they began the update to PeopleSoft v. 9.2. This upgrade is to be complete by May 2017: http://admin-enews.eureka.harvard.edu/news/peoplesoft-92-upgrade-starting-month
+
+I next went ahead and contacted Harvard IT help desk and asked them what the most updated version was. They responded that as of now the last upgrade was to PeopleSoft 8.5.1. 
+
+Cost:$3,016,000 
+
+I order to find the cost I then began to search "intext:peoplesoft upgrade cost inurl:huit.harvard.edu"
+
+Unpon runnning this search I came across the HUIT Project Management site that listed the currect projects and their goals, start, end, and funded phase status: http://pmo.huit.harvard.edu/projects-awarded-fy16
+
+I knew there should be a definitive cost on the project management site so I altered my google search to "intext:Peoplesoft upgrade cost inurl:pmo.huit.harvard.edu/awarded-projects" and was able to locate the actual cost of the project, along with how the cost changed from the 2014, and 2015 projects. The most current cost was found here:http://pmo.huit.harvard.edu/awarded-projects
+
+----------
+
+d. Started by Google searching "Jim Waldo Harvard", finding that James H. Waldo is a Gordon McKay Professor of the Practice of Computer Science and Chief Technical Officer at Harvard. This is from a link to his Harvard contact page and personal site: https://www.seas.harvard.edu/directory/waldo
+
+Knowing his full name and position I was able to search for "harvard information technology organization chart", which is where I was able to find that Anne Marguiles who is the VP / University Chief Information Officer is Jim Walden's boss. Found here: http://huit.harvard.edu/files/huit/files/huit_org_chart_current_as_of_8.26.16_-_with_links.pdf
+
+I was then able to search for "jim waldo 2015 publication" and found his publication titled "How to De-identify Your Data" here: http://dl.acm.org/citation.cfm?id=2838930
+
+------------
+e. The guys in the picture are in the East Building at MIT taken in 1964. They are undergraduate students, or "underclassmen-constituents" in the East Campus dorms. This is a "hall-hockey scene" on the 5th floor. This was a picture posted on the MIT Class of 1964 website. The procedure I took is as follows:
+
+First I chose to inspect the foswiki page source revealing the html code and the jpg source: src="http://1964.alumclass.mit.edu/s/1314/images/gid55/editor/east_campus/6104EC.jpg"
+
+Then with this information I was able for the image on the upper url site. This brought me to the page where the image was located, giving context to the photo and a brief description at: http://1964.alumclass.mit.edu/s/1314/2015/club-class-main.aspx?sid=1314&gid=55&pgid=11608
+
+

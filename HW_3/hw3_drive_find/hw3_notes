@@ -1,0 +1,170 @@
+http://nest.unm.edu/files/8813/9252/1107/Tutorial_6_-_Kali_Linux_-_Sleuthkit.pdf
+
+df: http://www.cyberciti.biz/faq/linux-check-disk-space-command/
+
+Open a terminal:
+sudo -rf /var/lib/autopsy/*
+Removes all files in autopsy directory.
+
+List all deleted files:
+
+fls -rd /root/Desktop/hw3.img 
+
+---------
+
+debugfs -R "stats" /root/Desktop/hw3.img > /root/Desktop/debugfs_stats.tx
+
+
+-----
+
+cat README~
+The password for the secret is orangutan
+
+---------
+
+hw3.img                                       100%  200MB  14.0MB/s
+
+-------------
+
+gdisk -l /root/Desktop/hw3.img 
+GPT fdisk (gdisk) version 1.0.1
+
+EBR signature for logical partition invalid; read 0x4E52, but should be 0xAA55
+Error reading logical partitions! List may be truncated!
+Partition table scan:
+  MBR: MBR only
+  BSD: not present
+  APM: not present
+  GPT: not present
+
+
+***************************************************************
+Found invalid GPT and valid MBR; converting MBR to GPT format
+in memory. 
+***************************************************************
+
+Disk /root/Desktop/hw3.img: 409600 sectors, 200.0 MiB
+Logical sector size: 512 bytes
+Disk identifier (GUID): 6F5D4E40-2687-4C38-921C-D9899A41E951
+Partition table holds up to 128 entries
+First usable sector is 34, last usable sector is 409566
+Partitions will be aligned on 1-sector boundaries
+Total free space is 387003 sectors (189.0 MiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1              63            2111   1024.5 KiB  8300  Linux filesystem
+   2            2112           22592   10.0 MiB    8300  Linux filesystem
+
+------------
+
+fdisk -l /root/Desktop/hw3.img
+
+Ignoring extra data in partition table 5.
+Ignoring extra data in partition table 5.
+Ignoring extra data in partition table 5.
+Invalid flag 0x524e of EBR (for partition 5) will be corrected by w(rite).
+Disk /root/Desktop/hw3.img: 200 MiB, 209715200 bytes, 409600 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x4e52e447
+
+Device                 Boot     Start        End   Sectors   Size Id Type
+/root/Desktop/hw3.img1 *           63       2111      2049     1M 83 Linux
+/root/Desktop/hw3.img2           2112      22592     20481    10M 83 Linux
+/root/Desktop/hw3.img3          22593   23213231  23190639  11.1G  5 Extended
+/root/Desktop/hw3.img5      942770763 1818344312 875573550 417.5G 31 unknown
+
+-------------------------------
+
+df -T /dev/loop0
+Filesystem     Type 1K-blocks  Used Available Use% Mounted on
+/dev/loop0     ext3    194641  4427    179982   3% /root/Desktop/hw3
+
+---------------------
+
+210 MB — 195 MB free (7.1% full)
+210 MB (209,715,200 bytes)
+Ext3 (version 1.0) — Mounted at /root/Desktop/hw3
+
+--------------
+
+vimdiff
+
+diff /root/Desktop/words /root/Desktop/hw3_drive_find/words
+48814d48813
+< gullible
+
+------
+
+password         (rAhdd)
+iloveyou         (yune)
+123qwe           (io)
+Warning: MaxLen = 13 is too large for the current hash type, reduced to 8
+3g 0:00:00:18  3/3 0.1579g/s 130822p/s 4996Kc/s 5252KC/s chann03..chamino
+19900214         (gshu)
+flatso           (Baerk)
+leo0715          (ELi)
+
+---------
+
+openssl aes-256-cbc -d -in secret.aes-256-cbc -out secret_decrpt.txt
+enter aes-256-cbc decryption password:
+
+cat secret_decrpt.txt 
+The secret is that there is no secret.
+
+================
+
+HW Answer notes and lab:
+
+debugfs hw3.img
+show_super_stats
+
+blkid hw3.img
+fsstat hw3.img | less
+
+mount -o loop -t ext3 hw3.img hw3_img_dir/
+
+debugfs hw3.img -R "testb 1 8192" | grep -v not | less
+debugfs hw3.img -R "icheck <block #>"
+debugfs hw3.img -R "ncheck <inode #>"
+
+The Sleuth Kit includes the command fls that can search for deleted files
+fls -rd hw3.img | grep ece
+
+icat /root/Desktop/hw3.img 11
+
+extundelete /root/Desktop/hw3_copy.img --restore-all
+
+extundelete --inode 11 /root/Desktop/hw3_copy.img 
+
+debugfs: ls -l (in the home directory)
+
+istat /root/Desktop/hw3.img 11 
+
+
+
+---------
+
+Use regular expressions to find a word with at least 3 vowels in a row. (1) Include the regular expressions you used to get this result.
+egrep "[aeiou]{3,}|^.+[aeiou][aeiou]y$" /usr/share/dict/words
+egrep is the same as grep -E (i.e., extended regular expression support)
+
+Use regular expressions to find a word with at least 3 consonants in a row. Include the regular expressions you used to get this result.
+grep -r "[bcdfghjlmnpqrstvwxz]\{3,\}"
+
+Write a regular expression that matches exactly IPs in our target subnet for class (i.e. 10.241.13.x). Are any of these IPs in the file?
+grep -Ea '10\.241\.13\.[0-9]{1,3}' 1.txt OR grep -Ea '10\.241\.13\.[0-255]{1}' 1.txt 
+
+egrep -aw "10\.241\.13\.[0-9]{1,3}" 1.txt
+
+How many unique IP addresses are there in the file
+grep -oa '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' 1.txt | sort | uniq
+grep -E -o -a '(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)' 1.txt | sort | uniq
+egrep -oa "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" 1.txt | sort -u | wc -l
+
+
+--------
+

@@ -1,0 +1,78 @@
+Problem 1. Short answer. [20 points]
+
+1a. Ethics and Laws. [8 points]
+Consider the following ethics and laws covered in class:
+
+    Electronic Communication Privacy Act, Wiretap Act, 18 U.S. Code Chapter 119.
+    Boston University computing ethics.
+    EC521 - Section A1 course policy. 
+
+For each of the following actions, chose one of the ethics/laws above that clearly prohibit it (within the US), and provide a concise one-sentence explanation. If no law ethics/laws apply, write NONE.
+
+    Leaving your iphone in our classroom so that it can secretly record subsequent conversations.
+    Selling a device that decrypts cable broadcasts for users who have not paid for the service.
+    Copying (with attribution) the code for an optimally parameterized version of the Special Number Field Sieve factoring algorithm to help you crack an RSA product-of-primes on the next homework.
+    Logging on to every machine in the lab and having it display an ad for a local computer repair center. 
+
+1b. Discovery [12 points]
+Please discover as much as you can about the following for your target.(1)
+
+    What is the operating system (and version) running on the target?
+    Identify the following on the machine:
+        MAC address: of the ethernet card
+        processors: their number, speed, and type
+        RAM memory: amount 
+    Accessible(2) ports and services (e.g. web, ftp, ...), including:
+        whether they’re TCP or UDP
+        versions of their servers 
+
+Problem 2. Attack [80 points]
+In this problem, your goal is to get gain access to as many accounts as possible on the target machine without displaying gross negligence.(3)
+
+You will prove your access by providing as many of the following elements as you can:
+
+    username: The username associated with the account.
+    password: The password that set by the professor for the account.(4)
+    data: The name and contents of one plain text file in the account home directory (but not in any subdirectory) except files that start .bash or .profile . 
+
+For each owned account, credit will be based on the most privileged group to which it belongs:
+
+    monarch : 9 points total (3 for each element)
+    noble : 6 points (2 for each element)
+    plebe : 3 point (1 for each element) 
+
+-------
+
+password         (noname)
+foobar           (foo)
+msfadmin         (msfadmin)
+weather 	(yetanother)
+YouWillNeverCrakThisPassword (alentino)
+
+2a - Hints I - Social Engineering
+One of your private investigators has managed to develop some information on several of the users that you may be able to use to access their accounts. All usernames are lower-case.
+
+    One of the users is the professor of the other section of this class, who uses a nickname from his iseclab days as a username; his password is the acronym of the symposium whose program committee meeting he attended last Thursday.
+    Another user has placed her PacketCable 1.0 Touchstone Telephony modem online, and her Internet/Cable provider is San Bruno Cable. Her username is the modulation scheme used by the modem, and her password is the downstream frequency (in MHz).
+    One user uses Harvard's Privacy and IT Risk Officer's first name for his username, and his password is the street address of his favorite MIT parking space, where, unfortunately, someone hit his motor vehicle on September 22, 2014 at 6:42pm (he reported it 41 seconds later).
+    One of the users is an academic program manager in the ECE office. His username is his first name, and his password refers to a code competition website that he likes to frequent. 
+
+    Yet another user is a machine associated with the picture below. His password is the name of the cargo ship mentioned on a kosmo.cz website that covered the machine.
+
+2b - Other hints
+
+    See if you can figure out what the java bytecode malware.class does.
+    There is a three-port knock, but it uses descending ports.
+    yetanother day of bad weather.
+    There's a usb.img floating around there somewhere.
+    You may earn up to 5 points extra credit on the exam by collecting more than 80 points on this problem. 
+
+Notes
+
+1 : Some of these might be easier to answer after you have completed parts of problem 2.
+
+2 : Either plainly, or through your work in problem 2.
+
+3 : Gross negligence includes action that will clearly interfere with other students' abilities to complete the exam without tangibly helping the perpetrator's answers.
+
+4 : The machines will reset frequently and unpredictably to their original state.

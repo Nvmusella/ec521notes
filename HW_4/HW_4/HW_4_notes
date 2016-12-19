@@ -1,0 +1,122 @@
+objdump --disassemble <elf file>
+
+http://www.epochconverter.com/timezones?q=1478410166&tz=America%2FNew_York
+
+Conversion results (1478410166)
+
+1478410166 converts to Sunday November 06, 2016 01:29:26 (am) in time zone America/New York (EDT)
+The offset (difference to Greenwich Time/GMT) is -04:00 or in seconds -14400.
+This date is in daylight saving time.
+
+--------
+
+http://www-rohan.sdsu.edu/~pwbrock/files/UNIT12.5.pdf
+
+http://stackoverflow.com/questions/18739239/python-how-to-get-stdout-after-running-os-system
+
+http://www.cplusplus.com/forum/windows/5998/
+
+http://www.lomira.k12.wi.us/faculty/jmuentner/ICM11.8.pdf
+
+------------
+
+
+python slot_run.py > slot_out.txt
+
+wc -l slot_out.txt
+62913 slot_out.txt = lines
+
+count run = 31456
+
+grep -ro '\[seven\] \[seven\] \[seven\]' slot_out.txt | wc -l
+3088
+
+3088/31456 = 0.098168871
+
+3659/34990
+2763/29558 = 0.093477231
+2852/29325 = 0.097254902
+
+--------
+
+./slot
+grep -o '\[seven\] \[seven\] \[seven\]' slot_out_bash.txt | wc -l
+rm slot_out_bash.txt
+
+
+----------------------------
+
+so you know how i did it, first i looked at what time(NULL) outputted
+
+it outputted an integer
+
+then i created a for loop in c++ to go through every integer between 0 and 1000000000 and then check and see if rand(the integer) would output the number we are looking for
+
+after letting that go for a while i got 1478410166 (1478410166)
+
+so that is the integer that needs to be passed into rand to get 728666055
+
+then had to figure out how to get the date time from that integer
+
+could not figure out a way to convert...im sure there is a way to do it but i couldn’t figure it out
+
+then i read something online that it is the number of seconds from some date
+
+so i ran a program that would print the time integer for the current time and print the full time date for the current time
+
+then subtracted the current integer from the one i found earlier
+
+then used that value which was the number of seconds since 1478410166
+
+then just calculated the number of days, hours, minutes and seconds that would be from the current time date stamp i did earlier
+
+then used date -s “6 NOV 2016 01:29:26”; ./vul4.out
+
+and then boom!
+
+you get ec521
+
+====
+
+./vulnA
+How should I go?  1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaec521
+ec521
+
+# 32 chars in total; 1 and the 31 a's to print once
+# Or 16 single numbers and then ec521 to repeat multiple times
+
+#mac - 1234567ec521 - multiple prints
+
+
+------------
+
+r2 slots3
+Vpd 
+b
+
+---------------
+
+layout asm
+set disassembly-flavor intel
+show disassembly-flavor
+
+-----------------
+
+date +%s -s @134460458; ./slots3
+date -s “6 NOV 2016 01:29:26”; ./vul4.out
+date -s '@1478410166'; ./a.out 
+
+-----
+
+readelf slots3, rabin 2 -I slots3
+file slots<#>
+readelf -h slots<#>
+
+
+
+==========
+
+lab 6: gdb 
+Replace the date output with a message “Look Ma, No Hacks”.
+export path of date to own executable that echos string
+
