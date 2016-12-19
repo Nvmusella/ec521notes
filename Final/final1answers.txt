@@ -290,3 +290,30 @@ lab@crunchbang:~$ objdump 3runMe
 lab@crunchbang:~$ ./3runMe 
 Number?47
 The psychology of morphology is nearly dogmatic in its economics.
+
+----------
+
+2runMe:
+
+lab@crunchbang:~$ echo 0000000000 | ./2runMe 
+What is the password?
+The mobility of polymorphism is in fact quite open-minded in its anthropology.
+lab@crunchbang:~$ cat 2runMe.C
+#include <cstdlib>
+#include <cstdio>
+
+int main() {
+  int incorrect = 1;
+  char password[10];
+  
+  printf("What is the password?\n");
+  scanf("%s",password);
+
+  if (incorrect) {
+    printf("Wrong ... sorry\n");
+    return -1;
+  }
+  else {
+    system("cat /home/railsfax/data.txt");
+  }
+}
