@@ -57,6 +57,8 @@ https://www.onlinedisassembler.com/odaweb/tgPmWMMG
 
 http://tools.kali.org/exploitation-tools/shellnoob
 
+http://resources.infosecinstitute.com/hello-world-c-assembly-object-file-and-executable/
+
 ----------
 (gdb) x/16xw $esp
 0xbffff6e8:     0xbffff7ac      0xb7e4964d      0xb7fc13c4      0x00000003(cc)
